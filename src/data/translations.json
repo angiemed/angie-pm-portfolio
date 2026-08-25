@@ -1,0 +1,104 @@
+{
+  "en": {
+    "nav": {
+      "home": "Home",
+      "portfolio": "Portfolio",
+      "about": "About",
+      "contact": "Contact"
+    },
+    "hero": {
+      "name": "Maria Angelica Avila Peña",
+      "title": "Product Manager & Project Manager",
+      "subtitle": "Career Path & Portfolio",
+      "description": "8 products delivered and in flight across B2C, B2B, SaaS, and regulated industries. Builder, strategist, and hands-on PM.",
+      "cta": "View My Work"
+    },
+    "portfolio": {
+      "title": "Product Work",
+      "subtitle": "5 years of shipping across multiple domains",
+      "viewDetails": "View Case Study",
+      "readMore": "Read More"
+    },
+    "sections": {
+      "problem": "Problem",
+      "solution": "Solution",
+      "myRole": "My Role",
+      "results": "Results",
+      "retrospective": "What I Learned",
+      "duration": "Duration",
+      "domain": "Domain",
+      "status": "Status"
+    },
+    "filter": {
+      "all": "All"
+    },
+    "about": {
+      "title": "About",
+      "subtitle": "How the work evolved",
+      "bio": "Angie has spent the last 5 years turning ambiguous problems into shipped products — starting as a first-time PM running field discovery for a Colombian e-commerce distributor, and now leading an AI-automated pipeline built on Google Gemini and LangGraph. Across e-commerce, edtech, regulated supply chains, social, food tech, gaming, ad tech, and enterprise SaaS, the throughline has stayed the same: get close to the people doing the work, hold the MVP line, and ship.",
+      "evolutionTitle": "Professional Evolution"
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Open to new product opportunities and conversations.",
+      "emailLabel": "Email",
+      "linkedinLabel": "LinkedIn"
+    },
+    "footer": {
+      "builtWith": "Built with React + Vite",
+      "contact": "Get in touch",
+      "email": "Let's talk"
+    }
+  },
+  "es": {
+    "nav": {
+      "home": "Inicio",
+      "portfolio": "Portafolio",
+      "about": "Sobre mí",
+      "contact": "Contacto"
+    },
+    "hero": {
+      "name": "Maria Angelica Avila Peña",
+      "title": "Product Manager & Project Manager",
+      "subtitle": "Trayectoria Profesional y Portafolio",
+      "description": "8 productos entregados y en desarrollo en B2C, B2B, SaaS e industrias reguladas. Builder, estratega, y PM hands-on.",
+      "cta": "Ver mi trabajo"
+    },
+    "portfolio": {
+      "title": "Trabajo en Productos",
+      "subtitle": "5 años entregando en múltiples dominios",
+      "viewDetails": "Ver Case Study",
+      "readMore": "Leer más"
+    },
+    "sections": {
+      "problem": "Problema",
+      "solution": "Solución",
+      "myRole": "Mi Rol",
+      "results": "Resultados",
+      "retrospective": "Lo que Aprendí",
+      "duration": "Duración",
+      "domain": "Dominio",
+      "status": "Estado"
+    },
+    "filter": {
+      "all": "Todos"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "subtitle": "Cómo evolucionó el trabajo",
+      "bio": "En los últimos 5 años, Angie ha convertido problemas ambiguos en productos entregados — empezando como PM primeriza haciendo discovery de campo para un distribuidor de e-commerce colombiano, y hoy liderando un pipeline automatizado con IA construido sobre Google Gemini y LangGraph. En e-commerce, edtech, cadenas de suministro reguladas, social, food tech, gaming, ad tech y SaaS empresarial, el hilo conductor se mantuvo igual: acercarse a las personas que hacen el trabajo, sostener el alcance del MVP, y entregar.",
+      "evolutionTitle": "Evolución Profesional"
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "Abierta a nuevas oportunidades de producto y conversaciones.",
+      "emailLabel": "Correo",
+      "linkedinLabel": "LinkedIn"
+    },
+    "footer": {
+      "builtWith": "Construido con React + Vite",
+      "contact": "Ponte en contacto",
+      "email": "Vamos a hablar"
+    }
+  }
+}

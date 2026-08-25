@@ -1,0 +1,60 @@
+{
+  "categories": [
+    {
+      "id": "ecommerce",
+      "name": "E-Commerce",
+      "color": "#FBBF24",
+      "description": "Self-service ordering, advisor tooling, platform evolution",
+      "projects": ["jaltech"]
+    },
+    {
+      "id": "edtech",
+      "name": "EdTech",
+      "color": "#A78BFA",
+      "description": "Mobile learning apps, spaced repetition, App Store delivery",
+      "projects": ["raio"]
+    },
+    {
+      "id": "supply-chain",
+      "name": "Supply Chain / Traceability",
+      "color": "#F59E0B",
+      "description": "Compliance-driven platforms, regulatory traceability, export documentation",
+      "projects": ["gold-by-gold"]
+    },
+    {
+      "id": "social",
+      "name": "Social",
+      "color": "#FB7185",
+      "description": "Matching algorithms, community connection, onboarding & retention",
+      "projects": ["nevermissed"]
+    },
+    {
+      "id": "foodtech",
+      "name": "Food Tech",
+      "color": "#F87171",
+      "description": "Ghost kitchens, corporate catering, multi-role order management",
+      "projects": ["colony-cooks"]
+    },
+    {
+      "id": "fantasy-sports",
+      "name": "Fantasy Sports",
+      "color": "#34D399",
+      "description": "Free-to-play games, seasonal drops, regulated-market UX research",
+      "projects": ["pricepicks"]
+    },
+    {
+      "id": "ai-media",
+      "name": "AI / Media Tech",
+      "color": "#22D3EE",
+      "description": "AI-automated workflows, LLM integration, constraint-driven optimization",
+      "projects": ["national-media"]
+    },
+    {
+      "id": "enterprise-workforce",
+      "name": "Enterprise / Workforce",
+      "color": "#60A5FA",
+      "description": "Multi-tenant SaaS, resource planning, AI-assisted role matching",
+      "projects": ["awardees"]
+    }
+  ]
+}

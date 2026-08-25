@@ -1,0 +1,59 @@
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0 0 2.5rem;
+}
+
+.filter-chip {
+  --chip-color: var(--lilac-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.filter-chip-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--chip-color);
+  flex-shrink: 0;
+}
+
+.filter-chip:hover {
+  color: var(--text);
+  border-color: color-mix(in srgb, var(--chip-color) 50%, var(--border));
+  transform: translateY(-2px);
+}
+
+.filter-chip.active {
+  color: var(--text);
+  background: color-mix(in srgb, var(--chip-color) 18%, var(--bg-card));
+  border-color: var(--chip-color);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--chip-color) 35%, transparent);
+}
+
+@media (max-width: 768px) {
+  .category-filter {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .filter-chip {
+    padding: 0.5rem 0.9rem;
+  }
+}
