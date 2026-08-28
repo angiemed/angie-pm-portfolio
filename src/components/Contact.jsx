@@ -19,8 +19,6 @@ export default function Contact() {
             {t('contact.availability')}
           </span>
 
-          <p className="contact-intro">{t('contact.intro')}</p>
-
           <div className="contact-links">
             <a className="contact-link" href={`mailto:${EMAIL}`}>
               <span className="contact-link-icon" aria-hidden="true">✉️</span>

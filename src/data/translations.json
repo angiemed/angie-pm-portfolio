@@ -151,8 +151,7 @@
     "contact": {
       "title": "Contact",
       "subtitle": "Open to new product opportunities and conversations.",
-      "availability": "Open to new opportunities",
-      "intro": "Currently open to Product Manager and Project Manager roles — especially ambiguous, 0→1 problems and AI-driven products.",
+      "availability": "Let's talk!",
       "emailLabel": "Email",
       "linkedinLabel": "LinkedIn"
     },
@@ -313,8 +312,7 @@
     "contact": {
       "title": "Contacto",
       "subtitle": "Abierta a nuevas oportunidades de producto y conversaciones.",
-      "availability": "Abierta a nuevas oportunidades",
-      "intro": "Actualmente abierta a roles de Product Manager y Project Manager — especialmente problemas ambiguos de 0 a 1 y productos con IA.",
+      "availability": "¡Hablemos!",
       "emailLabel": "Correo",
       "linkedinLabel": "LinkedIn"
     },
