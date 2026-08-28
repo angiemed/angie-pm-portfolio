@@ -1,0 +1,89 @@
+.lessons {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.lessons-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.lessons-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.lessons-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.lesson-card {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  background: var(--bg-hover);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--lilac-dark);
+  border-radius: var(--radius-md);
+  padding: 1.1rem 1.25rem;
+  transition: all var(--transition-fast);
+}
+
+.lesson-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--lilac-dark);
+}
+
+.lesson-index {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--lilac-dark);
+  flex-shrink: 0;
+}
+
+.lesson-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.lesson-project {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--lilac-bright);
+  margin-bottom: 0.4rem;
+}
+
+.lesson-card p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .lessons {
+    padding: 2rem 0;
+  }
+
+  .lessons-header h2 {
+    font-size: 1.75rem;
+  }
+}

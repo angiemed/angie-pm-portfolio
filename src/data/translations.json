@@ -4,6 +4,7 @@
       "home": "Home",
       "portfolio": "Portfolio",
       "about": "About",
+      "expertise": "Expertise",
       "contact": "Contact"
     },
     "hero": {
@@ -24,7 +25,7 @@
       "solution": "Solution",
       "myRole": "My Role",
       "results": "Results",
-      "retrospective": "Retrospective",
+      "learnings": "Learnings",
       "duration": "Duration",
       "domain": "Domain",
       "status": "Status"
@@ -42,9 +43,6 @@
       "keyDecisions": "Key Decisions",
       "launched": "Launched",
       "businessOutcome": "Business Outcome",
-      "whatWorked": "What Worked",
-      "whatDidnt": "What Didn't",
-      "nextTime": "Next Time",
       "skills": "Skills",
       "team": "Team",
       "teamSize": "people",
@@ -52,17 +50,109 @@
       "collapse": "Collapse"
     },
     "filter": {
-      "all": "All"
+      "all": "All",
+      "empty": "No case study here yet — more projects in this space are coming soon."
     },
     "about": {
       "title": "About",
-      "subtitle": "How the work evolved",
-      "bio": "Angie has spent the last 5 years turning ambiguous problems into shipped products — starting as a first-time PM running field discovery for a Colombian e-commerce distributor, and now leading an AI-automated pipeline built on Google Gemini and LangGraph. Across e-commerce, edtech, regulated supply chains, social, food tech, gaming, ad tech, and enterprise SaaS, the throughline has stayed the same: get close to the people doing the work, hold the MVP line, and ship.",
+      "subtitle": "A bit about who I am and how I got here",
+      "bio": "I'm Angélica, though most people call me Angie. I'm a Product Manager based in Medellín, Colombia, and I've been working in tech since 2020.",
+      "intro": [
+        "I was born in Buenaventura, Valle del Cauca, on Colombia's Pacific coast. I moved to Medellín to finish my studies and look for better opportunities and a different quality of life. That move shaped a lot of who I am: curious, adaptable, and interested in learning from new environments and people.",
+        "I've always enjoyed helping people. One of my favorite sayings is:"
+      ],
+      "quote": "El que no vive para servir, no sirve para vivir.",
+      "quoteNote": "Those who don't live to serve aren't fit to live.",
+      "quoteFollow": "That idea carries into how I think about product management too. I like working with people, understanding different perspectives, and figuring out how to move a problem forward together. Sometimes that means working through a solution myself; other times it means recognizing that someone else has the expertise I need and finding a way to bring them into the conversation. To me, strategy is as much about knowing where to look for an answer as it is about finding it yourself.",
+      "sections": [
+        {
+          "heading": "My path in tech",
+          "paragraphs": [
+            "I started out working with e-commerce and web platforms, then moved into more technical software environments over time. Since then I've contributed to B2B, B2C, and SaaS products across a range of industries and user types.",
+            "On the consumer side, I've worked on mobile products in social networking, health research, learning, and fantasy sports. On the enterprise side, I've worked on products supporting workforce management, mining traceability, and political campaign operations in the U.S.",
+            "That variety is one of the things I like most about this job. Every product brings a different problem, different users, different constraints, and a different group of people who need to work together to solve it."
+          ]
+        },
+        {
+          "heading": "How I work",
+          "paragraphs": [
+            "I'm usually involved across the whole product lifecycle: discovery, user research, scope, roadmaps, backlog, and keeping stakeholders and engineering aligned. The part I enjoy most, though, is creating clarity. I like taking a complex idea and breaking it down until the team understands what problem we're actually solving, why it matters, and what to do about it.",
+            "I don't try to have every answer myself. I'd rather ask the right questions, bring the right people into the room, and help the team find a way forward. That's probably the part of the job that comes most naturally to me: understanding the problem, connecting people and perspectives, and helping turn ideas into something real."
+          ]
+        },
+        {
+          "heading": "Why tech?",
+          "paragraphs": [
+            "I like being part of an industry that's always changing. There's usually something new to learn, whether it's a technology, a way of building products, or a different way of solving an old problem. At the same time, I try not to let it take over everything. I like staying curious about what's happening in the industry while keeping some balance with life outside of it."
+          ]
+        },
+        {
+          "heading": "Outside of work",
+          "paragraphs": [
+            "There's a lot more to me than Product Management.",
+            "I'm a Colombian girl from the Pacific Coast who has built her life in Medellín, and that has been one of the most rewarding parts of my journey. Medellín gives me the chance to have a professional life in tech while also being close to many of the things I enjoy outside of work.",
+            "I love theater, movies, exercising, hiking, and traveling. I also have a Shih Tzu, who is definitely part of my everyday life."
+          ]
+        }
+      ],
       "evolutionTitle": "Professional Evolution"
+    },
+    "contribution": {
+      "title": "My Contribution",
+      "subtitle": "Where I create the most value across a product's lifecycle",
+      "items": [
+        { "icon": "🔍", "title": "Discovery & Field Research", "text": "Starting with listening — understanding people's experiences, context, and pain points before jumping to solutions." },
+        { "icon": "🎯", "title": "Scope & MVP Strategy", "text": "Helping define what matters now, what comes next, and what the team needs to stay focused on." },
+        { "icon": "🤝", "title": "Stakeholder Alignment", "text": "Bringing different perspectives into the same conversation and helping teams move toward shared decisions." },
+        { "icon": "📊", "title": "Data-Informed Decisions", "text": "Using real usage metrics and evidence to challenge assumptions and make better product decisions." },
+        { "icon": "🔄", "title": "Agile Delivery & Backlog Ownership", "text": "Creating structure and transparency so teams can focus on delivering value." },
+        { "icon": "🧩", "title": "Product Thinking", "text": "Connecting business needs with user problems, exploring alternatives, and helping the team think through the implications of different product decisions." }
+      ]
+    },
+    "toolkit": {
+      "title": "My PM Toolkit",
+      "subtitle": "Skills, technical fluency, and tools built through 5 years of shipping",
+      "skillsLabel": "Skills",
+      "technicalLabel": "Technical Fluency",
+      "toolsLabel": "Tools",
+      "technical": [
+        "AI-powered products",
+        "Systems & Integrations",
+        "Technical Collaboration",
+        "Mobile · Web · Ecommerce · SaaS",
+        "Payments & third-party services",
+        "Enterprise & legacy systems"
+      ]
+    },
+    "philosophy": {
+      "title": "My Product Philosophy",
+      "subtitle": "What I've come to believe about building product, after five years of practice",
+      "items": [
+        { "text": "The feature is rarely the real problem — the workflow around it usually is." },
+        { "text": "Discovery means understanding the reality behind a request, not just capturing requirements." },
+        { "text": "Complexity comes from how people, workflows, and constraints interact — not from the number of features." },
+        { "text": "Quality is a team responsibility, not something QA owns alone." },
+        { "text": "Good product design starts with understanding how work is actually performed." },
+        { "text": "AI product management isn't about the model — it's about connecting technology to a problem worth solving." }
+      ]
+    },
+    "lessons": {
+      "title": "Product Lessons",
+      "subtitle": "Specific takeaways from 5 years of shipping, project by project",
+      "items": [
+        { "project": "JalTech", "text": "Operational complexity needs to be understood before designing the interface." },
+        { "project": "Raio", "text": "Scope conversations are more effective when trade-offs are made explicit." },
+        { "project": "Gold by Gold", "text": "Stakeholder confidence can be built through tangible progress, not just process explanations." },
+        { "project": "NeverMissed", "text": "Retrospectives are most useful when the team generates and owns the improvements." },
+        { "project": "Colony Cooks", "text": "Operational products need to respect the user's real environment and workflow." },
+        { "project": "Awardees", "text": "Designing for multi-tenancy from day one avoids costly rework once a platform is meant to scale." }
+      ]
     },
     "contact": {
       "title": "Contact",
       "subtitle": "Open to new product opportunities and conversations.",
+      "availability": "Open to new opportunities",
+      "intro": "Currently open to Product Manager and Project Manager roles — especially ambiguous, 0→1 problems and AI-driven products.",
       "emailLabel": "Email",
       "linkedinLabel": "LinkedIn"
     },
@@ -77,6 +167,7 @@
       "home": "Inicio",
       "portfolio": "Portafolio",
       "about": "Sobre mí",
+      "expertise": "Experiencia",
       "contact": "Contacto"
     },
     "hero": {
@@ -97,7 +188,7 @@
       "solution": "Solución",
       "myRole": "Mi Rol",
       "results": "Resultados",
-      "retrospective": "Retrospectiva",
+      "learnings": "Aprendizajes",
       "duration": "Duración",
       "domain": "Dominio",
       "status": "Estado"
@@ -115,9 +206,6 @@
       "keyDecisions": "Decisiones Clave",
       "launched": "Lanzamiento",
       "businessOutcome": "Resultado de Negocio",
-      "whatWorked": "Qué Funcionó",
-      "whatDidnt": "Qué No Funcionó",
-      "nextTime": "La Próxima Vez",
       "skills": "Habilidades",
       "team": "Equipo",
       "teamSize": "personas",
@@ -125,17 +213,108 @@
       "collapse": "Cerrar"
     },
     "filter": {
-      "all": "Todos"
+      "all": "Todos",
+      "empty": "Todavía no hay un case study aquí — pronto voy a sumar más proyectos en esta área."
     },
     "about": {
       "title": "Sobre mí",
-      "subtitle": "Cómo evolucionó el trabajo",
-      "bio": "En los últimos 5 años, Angie ha convertido problemas ambiguos en productos entregados — empezando como PM primeriza haciendo discovery de campo para un distribuidor de e-commerce colombiano, y hoy liderando un pipeline automatizado con IA construido sobre Google Gemini y LangGraph. En e-commerce, edtech, cadenas de suministro reguladas, social, food tech, gaming, ad tech y SaaS empresarial, el hilo conductor se mantuvo igual: acercarse a las personas que hacen el trabajo, sostener el alcance del MVP, y entregar.",
+      "subtitle": "Un poco sobre quién soy y cómo llegué hasta acá",
+      "bio": "Soy Angélica, aunque la mayoría me dice Angie. Soy Product Manager, vivo en Medellín, Colombia, y trabajo en tecnología desde 2020.",
+      "intro": [
+        "Nací en Buenaventura, Valle del Cauca, en la costa pacífica colombiana. Me mudé a Medellín para terminar mis estudios y buscar mejores oportunidades y una mejor calidad de vida. Esa mudanza marcó buena parte de quién soy hoy: curiosa, adaptable, y siempre interesada en aprender de entornos y personas nuevas.",
+        "Siempre me ha gustado ayudar a los demás. Uno de mis dichos favoritos es:"
+      ],
+      "quote": "El que no vive para servir, no sirve para vivir.",
+      "quoteFollow": "Esa idea también se conecta con la forma en que entiendo la gestión de producto. Me gusta trabajar con personas, entender distintas perspectivas, y encontrar la forma de sacar adelante un problema en conjunto. A veces eso significa pensar la solución yo misma; otras veces significa reconocer que alguien más tiene el conocimiento que necesito, y buscar la forma de sumarlo a la conversación. Para mí, la estrategia tiene tanto que ver con saber dónde buscar una respuesta como con saber encontrarla por cuenta propia.",
+      "sections": [
+        {
+          "heading": "Mi camino en tecnología",
+          "paragraphs": [
+            "Empecé trabajando con plataformas de e-commerce y web, y con el tiempo pasé a entornos de software más técnicos. Desde entonces he trabajado en productos B2B, B2C y SaaS, en distintas industrias y tipos de usuario.",
+            "Del lado del consumidor, he trabajado en productos móviles de redes sociales, investigación en salud, aprendizaje y fantasy sports. Del lado empresarial, he trabajado en productos de gestión de fuerza laboral, trazabilidad de minería, y operaciones de campañas políticas en Estados Unidos.",
+            "Esa variedad es una de las cosas que más disfruto de este trabajo. Cada producto trae un problema distinto, usuarios distintos, restricciones distintas, y un grupo distinto de personas que necesita trabajar en conjunto para resolverlo."
+          ]
+        },
+        {
+          "heading": "Cómo trabajo",
+          "paragraphs": [
+            "Normalmente estoy involucrada en todo el ciclo de vida del producto: discovery, investigación de usuarios, definición de alcance, roadmaps, backlog, y alineación entre stakeholders e ingeniería. Pero la parte que más disfruto es generar claridad. Me gusta tomar una idea compleja e ir desglosándola hasta que el equipo entiende qué problema estamos resolviendo realmente, por qué importa, y qué podemos hacer al respecto.",
+            "No espero tener todas las respuestas yo sola. Prefiero hacer las preguntas correctas, sumar a las personas indicadas a la conversación, y ayudar al equipo a encontrar un camino hacia adelante. Esa es probablemente la parte del trabajo que más natural me resulta: entender el problema, conectar personas y perspectivas, y ayudar a convertir ideas en algo real."
+          ]
+        },
+        {
+          "heading": "¿Por qué tecnología?",
+          "paragraphs": [
+            "Me gusta ser parte de una industria que siempre está cambiando. Casi siempre hay algo nuevo que aprender: una tecnología, una forma distinta de construir producto, o una manera diferente de resolver un problema viejo. Al mismo tiempo, trato de no dejar que eso consuma todo. Me gusta mantenerme curiosa sobre lo que pasa en la industria, sin perder el equilibrio con la vida que existe fuera de ella."
+          ]
+        },
+        {
+          "heading": "Fuera del trabajo",
+          "paragraphs": [
+            "Hay mucho más en mí que la gestión de producto.",
+            "Soy una mujer colombiana de la costa pacífica que ha construido su vida en Medellín, y eso ha sido una de las partes más gratificantes de mi camino. Medellín me da la posibilidad de tener una vida profesional en tecnología, mientras también estoy cerca de muchas de las cosas que disfruto fuera del trabajo.",
+            "Me encanta el teatro, el cine, hacer ejercicio, hacer senderismo, y viajar. También tengo una shih tzu, que definitivamente es parte de mi día a día."
+          ]
+        }
+      ],
       "evolutionTitle": "Evolución Profesional"
+    },
+    "contribution": {
+      "title": "Mi Aporte",
+      "subtitle": "Dónde genero más valor a lo largo del ciclo de vida de un producto",
+      "items": [
+        { "icon": "🔍", "title": "Discovery e Investigación de Campo", "text": "Empezar por escuchar: entender la experiencia, el contexto y los puntos de dolor de las personas antes de saltar a las soluciones." },
+        { "icon": "🎯", "title": "Alcance y Estrategia de MVP", "text": "Ayudar a definir qué importa ahora, qué viene después, y en qué necesita enfocarse el equipo." },
+        { "icon": "🤝", "title": "Alineación de Stakeholders", "text": "Traer distintas perspectivas a la misma conversación y ayudar a los equipos a avanzar hacia decisiones compartidas." },
+        { "icon": "📊", "title": "Decisiones Basadas en Datos", "text": "Usar métricas reales de uso y evidencia para cuestionar suposiciones y tomar mejores decisiones de producto." },
+        { "icon": "🔄", "title": "Entrega Ágil y Dueño del Backlog", "text": "Crear estructura y transparencia para que el equipo pueda enfocarse en entregar valor." },
+        { "icon": "🧩", "title": "Pensamiento de Producto", "text": "Conectar las necesidades del negocio con los problemas de los usuarios, explorar alternativas, y ayudar al equipo a pensar las implicaciones de distintas decisiones de producto." }
+      ]
+    },
+    "toolkit": {
+      "title": "Mi Toolkit de PM",
+      "subtitle": "Habilidades, dominio técnico y herramientas construidas en 5 años entregando producto",
+      "skillsLabel": "Habilidades",
+      "technicalLabel": "Dominio Técnico",
+      "toolsLabel": "Herramientas",
+      "technical": [
+        "Productos con IA",
+        "Sistemas e Integraciones",
+        "Colaboración Técnica",
+        "Mobile · Web · Ecommerce · SaaS",
+        "Pagos y servicios de terceros",
+        "Sistemas empresariales y legacy"
+      ]
+    },
+    "philosophy": {
+      "title": "Mi Filosofía de Producto",
+      "subtitle": "Lo que he llegado a creer sobre construir producto, después de cinco años de práctica",
+      "items": [
+        { "text": "La funcionalidad rara vez es el problema real — el flujo de trabajo que la rodea, sí lo es con frecuencia." },
+        { "text": "El discovery significa entender la realidad detrás de una solicitud, no solo levantar requerimientos." },
+        { "text": "La complejidad viene de cómo interactúan las personas, los flujos de trabajo y las restricciones — no de la cantidad de funcionalidades." },
+        { "text": "La calidad es responsabilidad de todo el equipo, no algo que le pertenece solo a QA." },
+        { "text": "Un buen diseño de producto empieza por entender cómo se realiza el trabajo en la práctica." },
+        { "text": "La gestión de producto de IA no se trata del modelo — se trata de conectar la tecnología con un problema que valga la pena resolver." }
+      ]
+    },
+    "lessons": {
+      "title": "Lecciones de Producto",
+      "subtitle": "Aprendizajes concretos de 5 años entregando producto, proyecto por proyecto",
+      "items": [
+        { "project": "JalTech", "text": "La complejidad operativa necesita entenderse antes de diseñar la interfaz." },
+        { "project": "Raio", "text": "Las conversaciones de alcance son más efectivas cuando los trade-offs se hacen explícitos." },
+        { "project": "Gold by Gold", "text": "La confianza de los stakeholders se puede construir con avances tangibles, no solo con explicaciones de proceso." },
+        { "project": "NeverMissed", "text": "Las retrospectivas son más útiles cuando el equipo genera y es dueño de las mejoras." },
+        { "project": "Colony Cooks", "text": "Los productos operativos necesitan respetar el entorno y el flujo de trabajo real del usuario." },
+        { "project": "Awardees", "text": "Diseñar para multi-tenancy desde el primer día evita retrabajos costosos una vez que una plataforma está pensada para escalar." }
+      ]
     },
     "contact": {
       "title": "Contacto",
       "subtitle": "Abierta a nuevas oportunidades de producto y conversaciones.",
+      "availability": "Abierta a nuevas oportunidades",
+      "intro": "Actualmente abierta a roles de Product Manager y Project Manager — especialmente problemas ambiguos de 0 a 1 y productos con IA.",
       "emailLabel": "Correo",
       "linkedinLabel": "LinkedIn"
     },

@@ -61,6 +61,11 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Offset anchor jumps so section headings don't land under the sticky header */
+section[id] {
+  scroll-margin-top: 96px;
+}
+
 body {
   margin: 0;
   font-family: var(--sans);

@@ -4,12 +4,18 @@ import projectsData from '../data/projects.json'
 import './About.css'
 
 export default function About() {
-  const { t } = useLanguage()
+  const { t, language } = useLanguage()
 
   const evolution = useMemo(
     () => [...projectsData.projects].sort((a, b) => a.order - b.order),
     []
   )
+
+  const intro = t('about.intro')
+  const introParagraphs = Array.isArray(intro) ? intro : []
+
+  const sections = t('about.sections')
+  const aboutSections = Array.isArray(sections) ? sections : []
 
   return (
     <section id="about" className="about">
@@ -20,6 +26,30 @@ export default function About() {
         </div>
 
         <p className="about-bio">{t('about.bio')}</p>
+
+        <div className="about-narrative">
+          {introParagraphs.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+
+          <blockquote className="about-quote">
+            <p>{t('about.quote')}</p>
+            {language === 'en' && (
+              <cite>{t('about.quoteNote')}</cite>
+            )}
+          </blockquote>
+
+          <p>{t('about.quoteFollow')}</p>
+
+          {aboutSections.map((section, i) => (
+            <div className="about-section" key={i}>
+              <h3>{section.heading}</h3>
+              {section.paragraphs.map((paragraph, j) => (
+                <p key={j}>{paragraph}</p>
+              ))}
+            </div>
+          ))}
+        </div>
 
         <div className="about-evolution">
           <h3>{t('about.evolutionTitle')}</h3>

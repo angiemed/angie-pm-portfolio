@@ -34,6 +34,55 @@
   color: var(--text-secondary);
 }
 
+.about-narrative {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.about-narrative p {
+  font-size: 0.98rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.about-quote {
+  margin: 0.5rem 0 1.5rem;
+  padding: 0.9rem 1.5rem;
+  border-left: 3px solid var(--lilac-bright);
+  background: var(--bg-card);
+}
+
+.about-quote p {
+  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.about-quote cite {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  font-style: normal;
+  color: var(--text-muted);
+}
+
+.about-section {
+  margin-top: 0.5rem;
+}
+
+.about-section h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 0.75rem;
+}
+
 .about-evolution {
   max-width: 780px;
   margin: 0 auto;
@@ -116,6 +165,10 @@
 
   .about-bio {
     font-size: 0.95rem;
+  }
+
+  .about-narrative p {
+    font-size: 0.9rem;
   }
 
   .evolution-duration {

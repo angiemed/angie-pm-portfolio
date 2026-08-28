@@ -1,0 +1,97 @@
+.contribution {
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contribution-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.contribution-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: var(--gradient-brand);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.3px;
+}
+
+.contribution-subtitle {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.contribution-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.contribution-card {
+  --accent-color: var(--lilac-dark);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  transition: all var(--transition-bounce);
+}
+
+.contribution-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 12px 32px rgba(167, 139, 250, 0.25);
+}
+
+.contribution-card:nth-child(6n+1) { --accent-color: var(--lilac-dark); }
+.contribution-card:nth-child(6n+2) { --accent-color: var(--blue-dark); }
+.contribution-card:nth-child(6n+3) { --accent-color: var(--cyan-bright); }
+.contribution-card:nth-child(6n+4) { --accent-color: var(--magenta-neon); }
+.contribution-card:nth-child(6n+5) { --accent-color: var(--lilac-bright); }
+.contribution-card:nth-child(6n+6) { --accent-color: var(--blue-bright); }
+
+.contribution-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  font-size: 1.4rem;
+  background: color-mix(in srgb, var(--accent-color) 16%, var(--bg-hover));
+  border: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent);
+  margin-bottom: 1rem;
+}
+
+.contribution-card h3 {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text);
+  margin: 0 0 0.6rem;
+  letter-spacing: -0.2px;
+}
+
+.contribution-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .contribution {
+    padding: 2rem 0;
+  }
+
+  .contribution-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .contribution-card {
+    padding: 1.5rem;
+  }
+}

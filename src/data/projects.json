@@ -59,16 +59,16 @@
         },
         "businessOutcome": "Codebulls went from a one-off vendor to JalTech's long-term platform partner, later redesigning checkout, product descriptions, and category navigation."
       },
-      "retrospective": {
-        "whatWorked": "Getting into the field with advisors surfaced constraints — like advisors working from tablets on the road — that never would have shown up in an office meeting.",
-        "whatDidnt": "Early expectation-setting on timelines was harder than expected with a client new to iterative delivery.",
-        "nextTime": "Would formalize the advisor feedback loop from week one instead of building it organically after launch."
-      },
+      "learnings": [
+        "The feature is rarely the real problem; the surrounding workflow often is.",
+        "Operational complexity needs to be understood before designing the interface.",
+        "Discovery can be deep even when it happens remotely."
+      ],
       "metadata": {
         "outcomes": ["shipped", "ongoing"],
         "skills": ["discovery", "change-management", "stakeholder-management", "platform-evolution"],
         "companyType": "Tech Distributor / B2B Wholesale",
-        "teamSize": 5
+        "teamSize": 4
       }
     },
     {
@@ -125,11 +125,11 @@
         },
         "businessOutcome": "Delivered a working MVP end-to-end, from discovery wireframes to store submission, for a client with high expectations and a fast timeline."
       },
-      "retrospective": {
-        "whatWorked": "Wireframing everything in Miro upfront gave the client and the team a shared visual language before any code was written.",
-        "whatDidnt": "Scope boundaries weren't documented explicitly enough upfront, which fed the mid-project renegotiation.",
-        "nextTime": "Would put a written scope agreement in front of the client before kickoff, not just verbal alignment on wireframes."
-      },
+      "learnings": [
+        "Requirements should express the product intent, not just a feature list.",
+        "Scope conversations are more effective when trade-offs are explicit.",
+        "Using the product personally can reveal friction that is invisible in specifications."
+      ],
       "metadata": {
         "outcomes": ["shipped"],
         "skills": ["scope-management", "mobile", "discovery"],
@@ -193,16 +193,17 @@
         },
         "businessOutcome": "Founders saw enough traction to consider turning the internal platform into a resellable product. The project transitioned to another PM with full documentation of decisions, architecture, and stakeholder relationships."
       },
-      "retrospective": {
-        "whatWorked": "Tangible demos and an early production release built founder confidence faster than explaining iterative methodology on its own would have.",
-        "whatDidnt": "The five-plus stakeholder workflows could have been mapped even earlier to avoid mid-project surprises about how different teams actually worked.",
-        "nextTime": "Would build a full stakeholder workflow map in week one, before any wireframing started."
-      },
+      "learnings": [
+        "Complexity often comes from the interaction between people, workflows, and constraints, not from feature count.",
+        "Discovery means understanding the reality behind a request before defining the solution.",
+        "Stakeholder confidence can be built through tangible progress rather than process explanations alone.",
+        "Different users can need different experiences while still participating in one connected product."
+      ],
       "metadata": {
         "outcomes": ["shipped", "handed-off"],
         "skills": ["regulatory-compliance", "stakeholder-management", "discovery", "handoff"],
         "companyType": "Mining / Precious Metals Export",
-        "teamSize": 6
+        "teamSize": 5
       }
     },
     {
@@ -264,11 +265,12 @@
         },
         "businessOutcome": "Delivered a fully functional MVP with matching, profile management, geolocation, and chat. The product continued to evolve with the client's internal team after handoff."
       },
-      "retrospective": {
-        "whatWorked": "Early UX testing caught matching-algorithm issues before full development, and safety features built user trust from day one.",
-        "whatDidnt": "The initial matching logic was too rigid — more algorithmic testing during discovery would have caught that sooner.",
-        "nextTime": "Would prototype matching-algorithm variants earlier and involve data science sooner to stress-test the proximity calculations."
-      },
+      "learnings": [
+        "Quality is a team responsibility, not only a QA function.",
+        "User testing by a PM can provide fast, complementary feedback, even though it doesn't replace formal testing.",
+        "Retrospectives are most useful when the team generates and owns the improvements.",
+        "Product operations can matter as much as feature delivery."
+      ],
       "metadata": {
         "outcomes": ["shipped", "ongoing"],
         "skills": ["discovery", "algorithm-thinking", "monetization", "safety-compliance", "stakeholder-management"],
@@ -334,11 +336,10 @@
         },
         "businessOutcome": "Shipped a fully functional MVP across three platforms. The client paused the product internally after launch, but all scope was completed and deployed, setting the foundation for a future catering-platform expansion."
       },
-      "retrospective": {
-        "whatWorked": "Observing real kitchen operations directly was crucial — those sessions caught workflow pain points that a spec alone wouldn't have surfaced, and the UAT process was thorough.",
-        "whatDidnt": "Underestimated the complexity of the cost-breakdown logic between customer and company subsidies — finance should have been involved earlier.",
-        "nextTime": "Would run Phase 2 planning (mobile apps, advanced analytics) in parallel to reduce time-to-impact, and prototype the cost logic before the full build."
-      },
+      "learnings": [
+        "Operational products need to respect the user's real environment and workflow.",
+        "Good product design starts with understanding how work is actually performed."
+      ],
       "metadata": {
         "outcomes": ["shipped"],
         "skills": ["discovery", "multi-role-design", "operations-thinking", "stakeholder-management", "qa-collaboration"],
@@ -402,16 +403,16 @@
         },
         "businessOutcome": "Enabled the company to expand its user base into new states without legal risk, backed by a fully data-driven UX research process."
       },
-      "retrospective": {
-        "whatWorked": "Live moderated interviews and A/B testing gave the team empathy-driven, data-backed confidence in each design decision.",
-        "whatDidnt": "Coordinating across five-plus teams — marketing, research, design, internal dev, DualBoot — sometimes slowed decision cycles.",
-        "nextTime": "Would set up a single shared source of truth for research findings earlier to speed up cross-team alignment."
-      },
+      "learnings": [
+        "Consumer products require fast learning loops and careful attention to user motivation.",
+        "MVP scope needs to balance speed to market with enough product depth to make the experience meaningful.",
+        "Post-launch iteration is part of product development, not an afterthought."
+      ],
       "metadata": {
         "outcomes": ["shipped"],
         "skills": ["regulatory-compliance", "ux-research", "ab-testing", "gamification"],
         "companyType": "Fantasy Sports / Gaming",
-        "teamSize": 8
+        "teamSize": 7
       }
     },
     {
@@ -471,16 +472,17 @@
         },
         "businessOutcome": "Both AI-powered initiatives launched successfully, meaningfully reducing manual work in media planning and competitive analysis while keeping planners and analysts in the loop."
       },
-      "retrospective": {
-        "whatWorked": "Designing for AI uncertainty from the start — confidence-based routing plus a mandatory human review step — avoided a 'trust the AI blindly' failure mode.",
-        "whatDidnt": "Some edge cases in matching and buy validation only surfaced once the AI was working against real data, not during early testing.",
-        "nextTime": "Would build out a larger test dataset earlier, before the AI pipelines were fully wired up."
-      },
+      "learnings": [
+        "AI product management is not only about the model; it's about connecting technology to a meaningful problem.",
+        "Ambiguous AI projects benefit from strong product framing and explicit success criteria.",
+        "A PM creates value by connecting different perspectives and helping the right people make better decisions.",
+        "Two products can use similar technology while requiring very different product thinking."
+      ],
       "metadata": {
         "outcomes": ["shipped"],
         "skills": ["ai-product-management", "business-technology-alignment", "stakeholder-management", "human-in-the-loop"],
         "companyType": "Media / AdTech",
-        "teamSize": 10
+        "teamSize": 7
       }
     },
     {
@@ -539,11 +541,11 @@
         },
         "businessOutcome": "Built stakeholder trust and alignment by documenting and validating each interaction flow, setting up the platform to scale into a true multi-tenant product."
       },
-      "retrospective": {
-        "whatWorked": "Designing permissions and data isolation for multi-tenancy from the start avoided costly rework later.",
-        "whatDidnt": "Still refining how much of the long-term multi-tenant vision to lock in early versus leave flexible.",
-        "nextTime": "Would map the full permissions matrix across all planned tenant types even earlier."
-      },
+      "learnings": [
+        "Designing for multi-tenancy from day one avoids costly rework once a platform is meant to scale beyond a single client.",
+        "Breaking a backlog into small, testable, role-specific tasks keeps delivery predictable as scope grows.",
+        "Documenting and validating each interaction flow builds stakeholder trust as much as shipping features does."
+      ],
       "metadata": {
         "outcomes": ["in-progress"],
         "skills": ["saas-architecture", "resource-planning", "stakeholder-management", "system-design"],

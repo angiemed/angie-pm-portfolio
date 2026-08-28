@@ -14,8 +14,16 @@ export default function Contact() {
           <h2>{t('contact.title')}</h2>
           <p className="contact-subtitle">{t('contact.subtitle')}</p>
 
+          <span className="contact-availability">
+            <span className="contact-availability-dot" aria-hidden="true" />
+            {t('contact.availability')}
+          </span>
+
+          <p className="contact-intro">{t('contact.intro')}</p>
+
           <div className="contact-links">
             <a className="contact-link" href={`mailto:${EMAIL}`}>
+              <span className="contact-link-icon" aria-hidden="true">✉️</span>
               <span className="contact-link-label">{t('contact.emailLabel')}</span>
               <span className="contact-link-value">{EMAIL}</span>
             </a>
@@ -25,6 +33,7 @@ export default function Contact() {
               target="_blank"
               rel="noopener noreferrer"
             >
+              <span className="contact-link-icon" aria-hidden="true">🔗</span>
               <span className="contact-link-label">{t('contact.linkedinLabel')}</span>
               <span className="contact-link-value">linkedin.com/in/maria-angelica-avila-pena</span>
             </a>

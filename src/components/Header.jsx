@@ -2,7 +2,20 @@ import { useEffect, useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import './Header.css'
 
-const SECTION_IDS = ['home', 'proyectos', 'about', 'contacto']
+// Every scrollable section maps to a nav entry. The four "expertise" sections
+// (contribution, toolkit, philosophy, lessons) share one nav item so the nav
+// stays compact while scroll-highlighting still tracks precisely.
+const SECTION_TO_NAV = {
+  home: 'home',
+  proyectos: 'proyectos',
+  about: 'about',
+  contribution: 'expertise',
+  toolkit: 'expertise',
+  philosophy: 'expertise',
+  lessons: 'expertise',
+  contacto: 'contacto',
+}
+const SECTION_IDS = Object.keys(SECTION_TO_NAV)
 
 export default function Header() {
   const { t, language, toggleLanguage } = useLanguage()
@@ -13,6 +26,7 @@ export default function Header() {
     { id: 'home', label: t('nav.home') },
     { id: 'proyectos', label: t('nav.portfolio') },
     { id: 'about', label: t('nav.about') },
+    { id: 'expertise', label: t('nav.expertise'), href: '#contribution' },
     { id: 'contacto', label: t('nav.contact') },
   ]
 
@@ -27,7 +41,7 @@ export default function Header() {
           .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
 
         if (visible.length > 0) {
-          setActiveSection(visible[0].target.id)
+          setActiveSection(SECTION_TO_NAV[visible[0].target.id] || visible[0].target.id)
         }
       },
       { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
@@ -63,7 +77,7 @@ export default function Header() {
               {navItems.map((item) => (
                 <a
                   key={item.id}
-                  href={`#${item.id}`}
+                  href={item.href || `#${item.id}`}
                   className={`nav-link${activeSection === item.id ? ' active' : ''}`}
                   onClick={() => setMenuOpen(false)}
                 >

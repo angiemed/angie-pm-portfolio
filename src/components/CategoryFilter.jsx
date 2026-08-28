@@ -1,7 +1,9 @@
+import { useLanguage } from '../contexts/LanguageContext'
 import { getCategories } from '../utils/categoryLookup'
 import './CategoryFilter.css'
 
 export default function CategoryFilter({ active, onChange, allLabel }) {
+  const { language } = useLanguage()
   const categories = getCategories()
 
   return (
@@ -22,7 +24,7 @@ export default function CategoryFilter({ active, onChange, allLabel }) {
           onClick={() => onChange(category.id)}
         >
           <span className="filter-chip-dot" />
-          {category.name}
+          {category.name[language] || category.name.en}
         </button>
       ))}
     </div>

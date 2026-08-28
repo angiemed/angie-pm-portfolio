@@ -4,7 +4,7 @@ import { getCategoryForProject } from '../utils/categoryLookup'
 import { getInitials } from '../utils/initials'
 import './ProjectCard.css'
 
-const TABS = ['problem', 'solution', 'myRole', 'results', 'retrospective']
+const TABS = ['problem', 'solution', 'myRole', 'results', 'learnings']
 
 export default function ProjectCard({ project }) {
   const { t } = useLanguage()
@@ -120,7 +120,7 @@ export default function ProjectCard({ project }) {
             {activeTab === 'solution' && <SolutionPanel project={project} t={t} />}
             {activeTab === 'myRole' && <RolePanel project={project} t={t} />}
             {activeTab === 'results' && <ResultsPanel project={project} t={t} />}
-            {activeTab === 'retrospective' && <RetrospectivePanel project={project} t={t} />}
+            {activeTab === 'learnings' && <LearningsPanel project={project} />}
           </div>
         )}
 
@@ -251,22 +251,16 @@ function ResultsPanel({ project, t }) {
   )
 }
 
-function RetrospectivePanel({ project, t }) {
-  const { retrospective } = project
+function LearningsPanel({ project }) {
+  const learnings = project.learnings || []
   return (
-    <div className="retro-grid">
-      <div className="retro-card retro-worked">
-        <h5>{t('labels.whatWorked')}</h5>
-        <p>{retrospective.whatWorked}</p>
-      </div>
-      <div className="retro-card retro-didnt">
-        <h5>{t('labels.whatDidnt')}</h5>
-        <p>{retrospective.whatDidnt}</p>
-      </div>
-      <div className="retro-card retro-next">
-        <h5>{t('labels.nextTime')}</h5>
-        <p>{retrospective.nextTime}</p>
-      </div>
+    <div className="learnings-grid">
+      {learnings.map((item, i) => (
+        <div className="learning-card" key={i}>
+          <span className="learning-index">{String(i + 1).padStart(2, '0')}</span>
+          <p>{item}</p>
+        </div>
+      ))}
     </div>
   )
 }

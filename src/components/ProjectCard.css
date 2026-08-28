@@ -295,7 +295,7 @@
 
 .info-block h5,
 .decision-card h5,
-.retro-card h5 {
+.learning-card h5 {
   font-size: 0.78rem;
   font-weight: 800;
   background: var(--gradient-brand);
@@ -462,37 +462,43 @@
   margin: 0;
 }
 
-/* Retrospective cards */
-.retro-grid {
+/* Learnings — proof points pulled from project documentation */
+.learnings-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
 }
 
-.retro-card {
+.learning-card {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
   border-radius: var(--radius-md);
   padding: 1.1rem;
   border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-color);
   background: var(--bg-hover);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
-.retro-card p {
+.learning-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-color);
+}
+
+.learning-index {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: var(--accent-color);
+  flex-shrink: 0;
+}
+
+.learning-card p {
   font-size: 0.88rem;
   color: var(--text-secondary);
   line-height: 1.6;
   margin: 0;
-}
-
-.retro-worked {
-  border-left: 3px solid #6ee7b7;
-}
-
-.retro-didnt {
-  border-left: 3px solid #fca5a5;
-}
-
-.retro-next {
-  border-left: 3px solid var(--blue-bright);
 }
 
 /* Footer meta bar (always visible once expanded, regardless of active tab) */

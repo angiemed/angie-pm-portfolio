@@ -2,59 +2,123 @@
   "categories": [
     {
       "id": "ecommerce",
-      "name": "E-Commerce",
+      "name": { "en": "E-Commerce", "es": "E-Commerce" },
       "color": "#FBBF24",
-      "description": "Self-service ordering, advisor tooling, platform evolution",
+      "description": {
+        "en": "Self-service ordering, advisor tooling, WordPress / Shopify / WooCommerce stores",
+        "es": "Pedidos autogestionados, herramientas para asesores, tiendas WordPress / Shopify / WooCommerce"
+      },
       "projects": ["jaltech"]
     },
     {
       "id": "edtech",
-      "name": "EdTech",
+      "name": { "en": "EdTech", "es": "EdTech" },
       "color": "#A78BFA",
-      "description": "Mobile learning apps, spaced repetition, App Store delivery",
+      "description": {
+        "en": "Mobile learning apps, spaced repetition, App Store delivery",
+        "es": "Apps de aprendizaje móvil, repetición espaciada, publicación en tiendas de apps"
+      },
       "projects": ["raio"]
     },
     {
       "id": "supply-chain",
-      "name": "Supply Chain / Traceability",
+      "name": { "en": "Supply Chain / Traceability", "es": "Cadena de Suministro / Trazabilidad" },
       "color": "#F59E0B",
-      "description": "Compliance-driven platforms, regulatory traceability, export documentation",
+      "description": {
+        "en": "Compliance-driven platforms, regulatory traceability, export documentation",
+        "es": "Plataformas orientadas a cumplimiento, trazabilidad regulatoria, documentación de exportación"
+      },
       "projects": ["gold-by-gold"]
     },
     {
       "id": "social",
-      "name": "Social",
+      "name": { "en": "Social", "es": "Social" },
       "color": "#FB7185",
-      "description": "Matching algorithms, community connection, onboarding & retention",
+      "description": {
+        "en": "Matching algorithms, community connection, onboarding & retention",
+        "es": "Algoritmos de matching, conexión comunitaria, onboarding y retención"
+      },
       "projects": ["nevermissed"]
     },
     {
       "id": "foodtech",
-      "name": "Food Tech",
+      "name": { "en": "Food Tech", "es": "Food Tech" },
       "color": "#F87171",
-      "description": "Ghost kitchens, corporate catering, multi-role order management",
+      "description": {
+        "en": "Ghost kitchens, corporate catering, multi-role order management",
+        "es": "Ghost kitchens, catering corporativo, gestión de pedidos multi-rol"
+      },
       "projects": ["colony-cooks"]
     },
     {
       "id": "fantasy-sports",
-      "name": "Fantasy Sports",
+      "name": { "en": "Fantasy Sports", "es": "Fantasy Sports" },
       "color": "#34D399",
-      "description": "Free-to-play games, seasonal drops, regulated-market UX research",
+      "description": {
+        "en": "Free-to-play games, seasonal drops, regulated-market UX research",
+        "es": "Juegos free-to-play, drops de temporada, investigación de UX en mercados regulados"
+      },
       "projects": ["pricepicks"]
     },
     {
       "id": "ai-media",
-      "name": "AI / Media Tech",
+      "name": { "en": "AI / Media Tech", "es": "IA / Media Tech" },
       "color": "#22D3EE",
-      "description": "AI-automated workflows, LLM integration, constraint-driven optimization",
+      "description": {
+        "en": "AI-automated workflows, LLM integration, constraint-driven optimization",
+        "es": "Flujos automatizados con IA, integración de LLMs, optimización basada en reglas de negocio"
+      },
       "projects": ["national-media"]
     },
     {
       "id": "enterprise-workforce",
-      "name": "Enterprise / Workforce",
+      "name": { "en": "Enterprise / Workforce", "es": "Enterprise / Workforce" },
       "color": "#60A5FA",
-      "description": "Multi-tenant SaaS, resource planning, AI-assisted role matching",
+      "description": {
+        "en": "Multi-tenant SaaS, resource planning, AI-assisted role matching",
+        "es": "SaaS multi-tenant, planificación de recursos, emparejamiento de roles asistido por IA"
+      },
       "projects": ["awardees"]
+    },
+    {
+      "id": "political-tech",
+      "name": { "en": "Political Tech", "es": "Political Tech" },
+      "color": "#818CF8",
+      "description": {
+        "en": "Campaign tooling, civic engagement platforms, voter & advocacy tech",
+        "es": "Herramientas de campaña, plataformas de participación cívica, tecnología electoral y de incidencia"
+      },
+      "projects": ["national-media"]
+    },
+    {
+      "id": "agritech",
+      "name": { "en": "Agritech", "es": "Agritech" },
+      "color": "#4ADE80",
+      "description": {
+        "en": "Farm-to-market platforms, agricultural supply chains, precision ag tooling",
+        "es": "Plataformas del campo al mercado, cadenas de suministro agrícolas, herramientas de agricultura de precisión"
+      },
+      "projects": []
+    },
+    {
+      "id": "healthtech",
+      "name": { "en": "Healthtech", "es": "Healthtech" },
+      "color": "#2DD4BF",
+      "description": {
+        "en": "Patient & provider platforms, care coordination, health data workflows",
+        "es": "Plataformas para pacientes y proveedores, coordinación de cuidado, flujos de datos de salud"
+      },
+      "projects": []
+    },
+    {
+      "id": "sports-tech",
+      "name": { "en": "Sports Tech", "es": "Sports Tech" },
+      "color": "#38BDF8",
+      "description": {
+        "en": "Athlete & fan platforms, performance data, live sports experiences",
+        "es": "Plataformas para atletas y aficionados, datos de desempeño, experiencias deportivas en vivo"
+      },
+      "projects": []
     }
   ]
 }
