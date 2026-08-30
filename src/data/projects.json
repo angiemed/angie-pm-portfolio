@@ -38,7 +38,7 @@
       "myRole": {
         "title": "Product Manager (first formal PM role)",
         "responsibilities": [
-          "Ran field discovery — visited JalTech regularly to map how advisors and customers actually worked, not how a spec assumed they worked",
+          "Ran discovery remotely — regular calls and continuous follow-up with advisors and customers to map how they actually worked, not how a spec assumed they worked",
           "Introduced iterative delivery to a client used to large upfront releases — showing that shipping something useful in 3 weeks and improving it after beats waiting 6 months for 'perfect'",
           "Prioritized MVP scope around advisor impact first, customer impact second",
           "Trained advisors during rollout and ran a continuous feedback loop to prioritize fixes"
@@ -170,7 +170,7 @@
       "myRole": {
         "title": "Product Manager",
         "responsibilities": [
-          "Ran field discovery in Medellín across five-plus internal stakeholder workflows",
+          "Ran discovery remotely across five-plus internal stakeholder workflows, staying close through calls and continuous follow-up",
           "Worked closely with two founders who had no prior software background and preferred concrete demonstrations over process explanations",
           "Replaced formal spec meetings with twice-weekly, 20-minute live demos and short recorded explainer videos",
           "Pushed for an early production release so founders could see their own employees using the system",
@@ -318,11 +318,11 @@
           "Wrote user stories with detailed acceptance criteria and user-flow documentation",
           "Facilitated sprint planning, QA cycles, UAT sessions, and go-live preparation",
           "Collaborated closely with QA on regression checklists and feature-by-feature testing",
-          "Spent time observing kitchen operations directly before designing the kitchen manager portal"
+          "Studied kitchen operations closely through remote check-ins and team reporting before designing the kitchen manager portal"
         ],
         "keyDecisions": [
           "Prioritized kitchen workflow efficiency over shipping monetization features early",
-          "Chose to observe real kitchen operations firsthand before designing the manager portal",
+          "Chose to understand real kitchen operations in depth, remotely, before designing the manager portal",
           "Deferred mobile apps to make sure the desktop web version was solid for production use"
         ]
       },

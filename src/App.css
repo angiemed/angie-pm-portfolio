@@ -24,6 +24,7 @@
   height: 140px;
   margin: 0 auto 2rem;
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,13 +33,10 @@
   box-shadow: 0 12px 32px rgba(167, 139, 250, 0.35);
 }
 
-.hero-avatar span {
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .hero h2 {
@@ -95,10 +93,6 @@
     width: 110px;
     height: 110px;
     margin-bottom: 1.5rem;
-  }
-
-  .hero-avatar span {
-    font-size: 2rem;
   }
 
   .hero h2 {

@@ -20,6 +20,9 @@
       "viewDetails": "View Case Study",
       "readMore": "Read More"
     },
+    "clients": {
+      "label": "Companies I've built products with"
+    },
     "sections": {
       "problem": "Problem",
       "solution": "Solution",
@@ -181,6 +184,9 @@
       "subtitle": "5 años entregando en múltiples dominios",
       "viewDetails": "Ver Case Study",
       "readMore": "Leer más"
+    },
+    "clients": {
+      "label": "Empresas con las que he construido producto"
     },
     "sections": {
       "problem": "Problema",

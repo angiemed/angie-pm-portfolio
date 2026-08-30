@@ -1,5 +1,6 @@
 import { useLanguage } from './contexts/LanguageContext'
 import Header from './components/Header'
+import Clients from './components/Clients'
 import Timeline from './components/Timeline'
 import About from './components/About'
 import MyContribution from './components/MyContribution'
@@ -18,8 +19,8 @@ function App() {
 
       <section id="home" className="hero">
         <div className="container">
-          <div className="hero-avatar" aria-hidden="true">
-            <span>MA</span>
+          <div className="hero-avatar">
+            <img src="/profile.jpg" alt={t('hero.name')} />
           </div>
           <h2>{t('hero.subtitle')}</h2>
           <p className="description">{t('hero.description')}</p>
@@ -27,6 +28,7 @@ function App() {
         </div>
       </section>
 
+      <Clients />
       <Timeline />
       <About />
       <MyContribution />

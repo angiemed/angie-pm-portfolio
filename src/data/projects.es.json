@@ -38,7 +38,7 @@
       "myRole": {
         "title": "Product Manager (primer rol formal de PM)",
         "responsibilities": [
-          "Hizo discovery de campo — visitó JalTech regularmente para mapear cómo trabajaban realmente los asesores y los clientes, no cómo lo asumía una especificación",
+          "Hizo discovery de forma remota — llamadas y seguimiento constante con asesores y clientes para mapear cómo trabajaban realmente, no cómo lo asumía una especificación",
           "Introdujo la entrega iterativa a un cliente acostumbrado a lanzamientos grandes de una sola vez — mostrando que lanzar algo útil en 3 semanas y mejorarlo después supera esperar 6 meses por algo 'perfecto'",
           "Priorizó el alcance del MVP centrado primero en el impacto para los asesores, y luego en el de los clientes",
           "Capacitó a los asesores durante el lanzamiento y mantuvo un ciclo continuo de feedback para priorizar arreglos"
@@ -170,7 +170,7 @@
       "myRole": {
         "title": "Product Manager",
         "responsibilities": [
-          "Hizo discovery de campo en Medellín a través de cinco o más flujos de trabajo de stakeholders internos",
+          "Hizo discovery de forma remota a través de cinco o más flujos de trabajo de stakeholders internos, con seguimiento constante por llamadas",
           "Trabajó de cerca con dos fundadores sin experiencia previa en software, que preferían demostraciones concretas antes que explicaciones de proceso",
           "Reemplazó las reuniones formales de especificación por demos en vivo de 20 minutos dos veces por semana y videos explicativos cortos grabados",
           "Impulsó un lanzamiento temprano a producción para que los fundadores vieran a sus propios empleados usando el sistema",
@@ -318,11 +318,11 @@
           "Escribió historias de usuario con criterios de aceptación detallados y documentación de flujo de usuario",
           "Facilitó sprint planning, ciclos de QA, sesiones de UAT y la preparación del go-live",
           "Colaboró de cerca con QA en checklists de regresión y pruebas funcionalidad por funcionalidad",
-          "Dedicó tiempo a observar directamente las operaciones de cocina antes de diseñar el portal de gestión de cocina"
+          "Dedicó tiempo a entender a fondo las operaciones de cocina, de forma remota, antes de diseñar el portal de gestión de cocina"
         ],
         "keyDecisions": [
           "Priorizó la eficiencia del flujo de cocina sobre lanzar funciones de monetización de forma temprana",
-          "Eligió observar operaciones reales de cocina de primera mano antes de diseñar el portal de gestión",
+          "Eligió entender las operaciones reales de cocina a fondo, de forma remota, antes de diseñar el portal de gestión",
           "Aplazó las apps móviles para asegurar que la versión web de escritorio estuviera sólida para producción"
         ]
       },
