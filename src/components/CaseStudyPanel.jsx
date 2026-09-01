@@ -154,7 +154,7 @@ function SolutionTab({ project, t }) {
         <div className="case-feature-list">
           {solution.keyFeatures.map((feature, i) => (
             <div className="case-feature-row" key={i}>
-              <span className="case-feature-mark">—</span>
+              <span className="case-feature-mark">•</span>
               <span>{feature}</span>
             </div>
           ))}
@@ -178,7 +178,7 @@ function SolutionTab({ project, t }) {
       )}
       {solution.mvpScope && (
         <p className="case-scope">
-          <span className="case-rule-label case-rule-label-inline">{t('labels.mvpScope')}</span> — {solution.mvpScope}
+          <span className="case-rule-label case-rule-label-inline">{t('labels.mvpScope')}</span>: {solution.mvpScope}
         </p>
       )}
     </div>

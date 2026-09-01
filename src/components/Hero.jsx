@@ -1,5 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext'
-import { LOCATION, CV_URL, CV_FILENAME } from '../constants'
+import { LOCATION, CV_URL, CV_FILENAME, NICKNAME } from '../constants'
 import Tilt from './Tilt'
 import './Hero.css'
 
@@ -67,6 +67,7 @@ export default function Hero() {
           <div className="hero-portrait-ring hero-portrait-ring-spin" />
           <div className="hero-portrait-ring hero-portrait-ring-static" />
           <img src="/profile.jpg" alt={t('hero.name')} className="hero-portrait-img" />
+          <div className="hero-nickname">"{NICKNAME}"</div>
           <div className="hero-availability">
             <span className="hero-availability-dot" />
             {t('contact.availability')}

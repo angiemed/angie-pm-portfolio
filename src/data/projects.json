@@ -6,204 +6,209 @@
   },
   "projects": [
     {
-      "id": "jaltech",
+      "id": "national-media",
       "order": 1,
-      "logo": "/logos/jaltech.png",
-      "title": "JalTech – E-Commerce Advisory Platform",
-      "domain": "E-Commerce / Retail",
-      "duration": "2020 – 2021",
+      "logo": "/logos/national-media.png",
+      "title": "National Media – AI-Powered Media Automation",
+      "domain": "AdTech / AI Automation",
+      "duration": "2025 – 2026",
       "status": "Shipped",
-      "shortDescription": "Advisory module for a Colombian tech distributor that let customers self-serve and advisors act as order proxies — cutting billing time from hours to minutes.",
+      "shortDescription": "Two AI-powered initiatives for a national media client, automating media planning and accelerating competitive advertising analysis, that cut manual work while keeping planners and analysts in the loop.",
       "problem": {
-        "situation": "Order-taking was 100% manual: a customer called an advisor, the advisor wrote the order down by hand, then it was keyed into billing later.",
-        "businessContext": "Colombia's e-commerce boom (2020–2021) was accelerating, but JalTech's advisors — spread across regions like Chocó — had no digital tools to keep up.",
-        "userPain": "Advisors spent over 60% of their time on admin instead of selling, and customers had no way to order without waiting for an advisor to be free.",
-        "metric": "Order-to-billing time → target: cut it dramatically"
+        "situation": "Media planners were manually extracting rate-card data, matching it against audience data, and building media buys by hand against strict business rules, a process that could take most of a day. Separately, competitive advertising analysis was also largely manual and slow to turn around.",
+        "businessContext": "National Media wanted to reduce manual work across two related but distinct workflows (media planning and competitive advertising analysis) without removing human expertise from either one.",
+        "userPain": "Manual matching and buy-building was slow and error-prone, with no systematic way to validate a proposed buy against business rules, and no fast way to analyze competitor advertising activity.",
+        "metric": "Manual process time → target: several times faster while keeping planners and analysts in the loop"
       },
       "solution": {
-        "approach": "Built an advisory module: customers could self-serve their own orders, and advisors could act as a proxy — capturing customer data and mounting the order directly in the system, auto-billed.",
+        "approach": "Two AI-powered initiatives with the same client stakeholder group: MediaBuyer, which automates media planning by extracting rate-card data and generating buys validated against business rules, and Competitive Automation, which speeds up competitive advertising analysis. Both keep a human review step before AI output is finalized.",
         "keyFeatures": [
-          "Self-service order creation for end customers",
-          "Advisor-as-proxy order entry with auto-billing",
-          "Automatic order confirmations",
-          "Order tracking dashboard"
+          "Automated extraction and matching of rate-card and audience data",
+          "AI-generated media buys checked against business rules before being finalized",
+          "A human-in-the-loop review step for lower-confidence AI outputs",
+          "Automated competitive advertising analysis feeding into faster campaign creation",
+          "Status visibility for planners throughout each process"
         ],
         "technicalDecisions": {
-          "decision": "Build the module on top of WordPress, integrated with JalTech's existing billing system",
-          "rationale": "Fastest path to shipping without replacing infrastructure the client already depended on",
-          "tradeoff": "Tied future iterations to WordPress's plugin ecosystem, but avoided a costly re-platform"
+          "decision": "Built MediaBuyer as two independent pipeline stages instead of one continuous flow",
+          "rationale": "Lets either stage retry or restart on failure without losing the other stage's completed work",
+          "tradeoff": "More orchestration complexity up front, in exchange for more resilience against failures in the external systems each stage depends on"
         },
-        "mvpScope": "Self-service ordering + advisor-as-proxy flow shipped first; checkout redesign, product descriptions, and mega menu came later as the platform evolved"
-      },
-      "myRole": {
-        "title": "Product Manager (first formal PM role)",
-        "responsibilities": [
-          "Ran discovery remotely — regular calls and continuous follow-up with advisors and customers to map how they actually worked, not how a spec assumed they worked",
-          "Introduced iterative delivery to a client used to large upfront releases — showing that shipping something useful in 3 weeks and improving it after beats waiting 6 months for 'perfect'",
-          "Prioritized MVP scope around advisor impact first, customer impact second",
-          "Trained advisors during rollout and ran a continuous feedback loop to prioritize fixes"
-        ],
-        "keyDecisions": [
-          "Shipped the advisor-as-proxy flow before full customer self-service, because it unblocked revenue fastest",
-          "Built a recurring listening loop with advisors (demos + feedback sessions) instead of a one-time handoff",
-          "Held the line on 2-week sprints even when the client pushed for a single big-bang release"
-        ]
-      },
-      "results": {
-        "launched": "2021",
-        "headline": "Billing time cut ~5x",
-        "metrics": {
-          "metric1": "Billing time: 2–3 hours → 15–30 minutes per order",
-          "metric2": "Advisor adoption: feature was actively requested, not just tolerated",
-          "metric3": "Engagement: single project → 18+ months of ongoing platform evolution work"
-        },
-        "businessOutcome": "Codebulls went from a one-off vendor to JalTech's long-term platform partner, later redesigning checkout, product descriptions, and category navigation."
-      },
-      "learnings": [
-        "The feature is rarely the real problem; the surrounding workflow often is.",
-        "Operational complexity needs to be understood before designing the interface.",
-        "Discovery can be deep even when it happens remotely."
-      ],
-      "metadata": {
-        "outcomes": ["shipped", "ongoing"],
-        "skills": ["discovery", "change-management", "stakeholder-management", "platform-evolution"],
-        "companyType": "Tech Distributor / B2B Wholesale",
-        "teamSize": 4
-      }
-    },
-    {
-      "id": "raio",
-      "order": 2,
-      "logo": "/logos/raio.png",
-      "title": "Raio – Spaced Repetition Language Learning App",
-      "domain": "EdTech / Mobile",
-      "duration": "2021 – 2022",
-      "status": "Shipped",
-      "shortDescription": "A science-backed, non-gamified alternative to Duolingo — mobile flashcards using spaced repetition, shipped on iOS and Android for a YouTube language-learning influencer.",
-      "problem": {
-        "situation": "The client had a clear vision for a spaced-repetition learning app but no spec, no wireframes, and no technical plan.",
-        "businessContext": "The client had built an engaged YouTube audience around learning English and wanted a product that matched their teaching style, not a gamified app.",
-        "userPain": "Language learners wanted an efficient way to actually retain what they studied, not streaks and badges.",
-        "metric": "Time-to-market → target: ship on both app stores within a year"
-      },
-      "solution": {
-        "approach": "Translated the client's vision into Miro wireframes — swipeable flashcards driven by a spaced-repetition algorithm — then handed off to Celerik's design team for high-fidelity design and build.",
-        "keyFeatures": [
-          "Spaced-repetition scheduling engine",
-          "Swipe/tap flashcard interaction",
-          "Multi-language support",
-          "Published on the Apple App Store and Google Play"
-        ],
-        "technicalDecisions": {
-          "decision": "Started with the Google Translate API instead of a premium translation service",
-          "rationale": "Faster and cheaper to ship an MVP",
-          "tradeoff": "The client pushed back mid-project on translation quality, forcing a scope renegotiation that cost 2–3 sprints"
-        },
-        "mvpScope": "Core flashcard engine + spaced repetition + both store submissions; deferred a premium translation provider and social features"
+        "mvpScope": "MediaBuyer: rate-card upload through buy generation, human review, and export. Competitive Automation: automated competitive analysis feeding into campaign creation. Deferred: full history/reporting views and multi-market batching for MediaBuyer."
       },
       "myRole": {
         "title": "Product Manager",
         "responsibilities": [
-          "Ran discovery in Miro — turned the client's verbal vision into concrete wireframes and user flows",
-          "Negotiated scope creep, most notably a mid-project push to swap translation providers",
-          "Learned mobile fundamentals from scratch: iOS vs. Android differences, responsive constraints, App Store and Google Play submission mechanics",
-          "Used the app personally, on a daily learning routine, to validate the experience firsthand"
+          "Translated ambiguous business needs into clearer product questions and priorities across both initiatives",
+          "Connected National Media's domain experts with engineering and QA so business expectations and technical constraints were discussed in the same context",
+          "Defined confidence thresholds for AI outputs, routing lower-confidence results to manual review instead of treating AI output as simply done or not done",
+          "Translated media-buying terminology into concrete rules engineering could validate against",
+          "Supported alignment across both initiatives with the same client stakeholder group while keeping their goals distinct",
+          "Aligned a cross-functional team spanning backend, frontend, and QA"
         ],
         "keyDecisions": [
-          "Held the MVP line on the translation-service scope-creep request rather than absorbing an unbudgeted 2–3 sprint detour",
-          "Personally tested the product to catch UX confusion before it reached users",
-          "Managed the handoff from the wireframes to Celerik's internal design team"
+          "Kept human review in the loop for lower-confidence AI matches rather than fully automating the decision",
+          "Scoped advanced reporting and batching out of the first release to protect the launch timeline",
+          "Prioritized reliability and audit trails over adding more automation features"
         ]
       },
       "results": {
-        "launched": "2022",
-        "headline": "Live on iOS & Android",
+        "launched": "2025 – 2026",
+        "headline": "5x+ and 3x faster",
         "metrics": {
-          "metric1": "Shipped on both iOS and Android",
-          "metric2": "MVP scope held despite repeated scope-creep pressure",
-          "metric3": "Mobile release process completed successfully on both the App Store and Google Play"
+          "metric1": "MediaBuyer: a process that previously took almost a full day reduced to a workflow reported as 5x+ faster",
+          "metric2": "Competitive Automation: campaign creation speed improved by approximately 3x",
+          "metric3": "Both initiatives launched with manual effort reduced while human expertise remained part of the workflow"
         },
-        "businessOutcome": "Delivered a working MVP end-to-end, from discovery wireframes to store submission, for a client with high expectations and a fast timeline."
+        "businessOutcome": "Both AI-powered initiatives launched successfully, meaningfully reducing manual work in media planning and competitive analysis while keeping planners and analysts in the loop."
       },
       "learnings": [
-        "Requirements should express the product intent, not just a feature list.",
-        "Scope conversations are more effective when trade-offs are explicit.",
-        "Using the product personally can reveal friction that is invisible in specifications."
+        "AI product management is not only about the model; it's about connecting technology to a meaningful problem.",
+        "Ambiguous AI projects benefit from strong product framing and explicit success criteria.",
+        "A PM creates value by connecting different perspectives and helping the right people make better decisions.",
+        "Two products can use similar technology while requiring very different product thinking."
       ],
       "metadata": {
         "outcomes": ["shipped"],
-        "skills": ["scope-management", "mobile", "discovery"],
-        "companyType": "EdTech / Creator Product",
-        "teamSize": 4
+        "skills": ["ai-product-management", "business-technology-alignment", "stakeholder-management", "human-in-the-loop"],
+        "companyType": "Media / AdTech",
+        "teamSize": 7
       }
     },
     {
-      "id": "gold-by-gold",
-      "order": 3,
-      "logo": "/logos/gold-by-gold.png",
-      "title": "Gold by Gold – Gold Traceability & Compliance Platform",
-      "domain": "Supply Chain / Regulatory",
-      "duration": "2021 – 2022",
+      "id": "awardees",
+      "order": 2,
+      "logo": "/logos/awardees.png",
+      "title": "Awardees – Resource Management & Project Planning Platform",
+      "domain": "Enterprise SaaS / Workforce",
+      "duration": "June 2025 – April 2026",
       "status": "Shipped",
-      "shortDescription": "Centralized platform to legalize and trace gold from three sourcing channels in Colombia through export to Europe — replacing fully manual, audit-vulnerable paperwork.",
+      "shortDescription": "Multi-tenant SaaS platform for organizations to plan projects, allocate people, and manage resource requests from a single system.",
       "problem": {
-        "situation": "Gold came in through three very different channels — subsistence mining, recycled jewelry, and industrial mining — each with its own documentation, and none of it centralized.",
-        "businessContext": "Exporting to Europe legally requires proving where every ounce of gold came from. Manual paperwork couldn't satisfy that bar or scale with volume.",
-        "userPain": "Five-plus internal teams — tesorería, radicación, cobros, exportaciones, operations — each ran a different undocumented workflow with no shared source of truth.",
-        "metric": "Regulatory risk → target: audit-ready traceability, near zero risk"
+        "situation": "The client had no centralized way to plan projects, assign roles, track availability, or manage internal resource requests.",
+        "businessContext": "The long-term vision is a multi-tenant platform that scales beyond a single client to support broader internal team coordination.",
+        "userPain": "Teams couldn't see resource availability or allocation in real time, making planning and requests slow and error-prone.",
+        "metric": "Clean, testable MVP backlog covering core resource-planning functionality"
       },
       "solution": {
-        "approach": "Built a centralized platform to collect provider documentation, run gold through a structured legalization workflow, and generate audit-ready traceability reports.",
+        "approach": "Built four core modules (Projects, People, Requests, and User Management) on a role-based, multi-tenant-ready architecture.",
         "keyFeatures": [
-          "Centralized document collection per provider across all three sourcing channels",
-          "Gold legalization workflow (weigh-in → processing → export documentation)",
-          "Inventory dashboard tracking gold bars through each stage",
-          "Traceability reporting built for European auditors"
+          "A people directory covering profiles, documents, roles, availability, skills, and allocation history",
+          "Project management covering project records, phases, and resource assignment by role",
+          "A requests module with a structured workflow for initiating and approving resource assignments",
+          "Availability and allocation planning with visibility into over- and under-allocation",
+          "A role-based permissions matrix separating Admins, Supervisors, and Read-only users"
         ],
         "technicalDecisions": {
-          "decision": "Pushed the providers/documentation module into production with the tesorería team before the full legalization module was finished",
-          "rationale": "The founders needed to see the system working with real employees, not another promise",
-          "tradeoff": "Ran the legacy manual process and the new system in parallel during rollout, adding short-term overhead"
+          "decision": "Designed the data model and permissions system for multi-tenancy from day one, even though the first release serves a single client",
+          "rationale": "Retrofitting multi-tenancy later would mean rebuilding data isolation and permission logic from scratch",
+          "tradeoff": "More upfront design work before the first client-facing feature shipped"
         },
-        "mvpScope": "Providers and document-radication module shipped to production; the legalization module was still in development at handoff, with exports and advanced reporting deferred to a later phase"
+        "mvpScope": "People, Projects, Requests, and User Management modules shipped first; a full multi-tenant onboarding flow for additional organizations was deferred"
       },
       "myRole": {
         "title": "Product Manager",
         "responsibilities": [
-          "Ran discovery remotely across five-plus internal stakeholder workflows, staying close through calls and continuous follow-up",
-          "Worked closely with two founders who had no prior software background and preferred concrete demonstrations over process explanations",
-          "Replaced formal spec meetings with twice-weekly, 20-minute live demos and short recorded explainer videos",
-          "Pushed for an early production release so founders could see their own employees using the system",
-          "Documented decisions and architecture thoroughly for a clean handoff to the next PM"
+          "Helped define the initial MVP scope based on business needs and technical feasibility",
+          "Structured and maintained the backlog in Azure DevOps, split into small, testable, role-specific tasks",
+          "Worked directly with the client and designers to shape UX flows and user journeys",
+          "Defined system logic, field behavior, and validation rules across key modules",
+          "Supported AI-integration planning for role recommendations based on user attributes and onboarding data"
         ],
         "keyDecisions": [
-          "Chose tangible demos and videos over trying to explain agile methodology to non-technical founders",
-          "Released the MVP into production before it was fully complete, to build trust through momentum",
-          "Scoped advanced reporting into a later phase to protect the core delivery timeline",
-          "Handed the project off cleanly to another PM once scope grew toward a resellable product"
+          "Designed the People and Projects detail views around tabbed navigation for structured data",
+          "Chose to plan for multi-tenant scale from the MVP instead of retrofitting later",
+          "Aligned frontend/backend QA priorities each sprint to keep the backlog testable"
         ]
       },
       "results": {
-        "launched": "2022 (providers/radication module in production; legalization module handed off in progress)",
-        "headline": "Audit-ready traceability",
+        "launched": "Shipped (4 core modules delivered)",
+        "headline": "4 core modules shipped",
         "metrics": {
-          "metric1": "Provider documentation: scattered paperwork → 100% centralized",
-          "metric2": "Permit verification: fully manual → automated",
-          "metric3": "Regulatory risk: high → near zero"
+          "metric1": "Delivered a clean, testable MVP backlog covering core functionality",
+          "metric2": "Four core modules shipped: People, Projects, Requests, User Management",
+          "metric3": "AI-assisted role-matching logic scoped for onboarding"
         },
-        "businessOutcome": "Founders saw enough traction to consider turning the internal platform into a resellable product. The project transitioned to another PM with full documentation of decisions, architecture, and stakeholder relationships."
+        "businessOutcome": "Built stakeholder trust and alignment by documenting and validating each interaction flow, setting up the platform to scale into a true multi-tenant product."
       },
       "learnings": [
-        "Complexity often comes from the interaction between people, workflows, and constraints, not from feature count.",
-        "Discovery means understanding the reality behind a request before defining the solution.",
-        "Stakeholder confidence can be built through tangible progress rather than process explanations alone.",
-        "Different users can need different experiences while still participating in one connected product."
+        "Designing for multi-tenancy from day one avoids costly rework once a platform is meant to scale beyond a single client.",
+        "Breaking a backlog into small, testable, role-specific tasks keeps delivery predictable as scope grows.",
+        "Documenting and validating each interaction flow builds stakeholder trust as much as shipping features does."
       ],
       "metadata": {
-        "outcomes": ["shipped", "handed-off"],
-        "skills": ["regulatory-compliance", "stakeholder-management", "discovery", "handoff"],
-        "companyType": "Mining / Precious Metals Export",
-        "teamSize": 5
+        "outcomes": ["shipped"],
+        "skills": ["saas-architecture", "resource-planning", "stakeholder-management", "system-design"],
+        "companyType": "Enterprise SaaS / Resource Management",
+        "teamSize": 6
+      }
+    },
+    {
+      "id": "pricepicks",
+      "order": 3,
+      "logo": "/logos/pricepicks.png",
+      "title": "PrizePicks – Free-to-Play Game Mode & Seasonal Drops",
+      "domain": "Fantasy Sports / Gaming",
+      "duration": "February 2024 – May 2025",
+      "status": "Shipped",
+      "shortDescription": "Free-to-play mode for a leading fantasy sports app, letting it legally expand into non-paid states with streaks and event-based minigames instead of real-money betting.",
+      "problem": {
+        "situation": "PrizePicks operated in paid U.S. states, but regulatory restrictions on monetary betting blocked expansion into non-paid states.",
+        "businessContext": "The company needed a free-to-play version that kept the core game's engagement without involving money, in order to reach new markets legally.",
+        "userPain": "Users in non-paid states had no way to engage with the core game experience at all.",
+        "metric": "User base expansion into non-paid states without legal risk"
+      },
+      "solution": {
+        "approach": "Built a free-to-play mode around daily picks, streaks, leaderboards, and event-based minigames tied to real-world sports and pop-culture moments.",
+        "keyFeatures": [
+          "A daily pick game where users choose from a rotating set of cards and make an Over/Under prediction",
+          "Live scoring during the actual game",
+          "Streak tracking and leaderboard competition",
+          "Themed minigames ('Drops') tied to major sports and pop-culture events",
+          "Recurring bonus-streak events tied to specific days and themes"
+        ],
+        "technicalDecisions": {
+          "decision": "Ran moderated live user interviews and A/B tests before locking UI decisions",
+          "rationale": "A fully staffed UX research team meant decisions could be data-driven instead of opinion-driven",
+          "tradeoff": "Slower to ship individual UI changes, but higher confidence each change actually improved usability"
+        },
+        "mvpScope": "Daily pick game, streaks, leaderboard, and the first seasonal Drop shipped first; an expanded Drop calendar and deeper personalization were deferred"
+      },
+      "myRole": {
+        "title": "Product Manager",
+        "responsibilities": [
+          "Coordinated cross-functionally across marketing, research, design, internal developers, and DualBoot",
+          "Gathered requirements and kept the roadmap aligned across teams",
+          "Supported the design team with clear problem definitions and success metrics",
+          "Participated in live moderated user interviews and unassisted usability testing",
+          "Ran sprint planning, backlog triage, and delivery QA"
+        ],
+        "keyDecisions": [
+          "Prioritized entertainment mechanics (streaks, Drops) over betting-adjacent framing to stay compliant",
+          "Used real usage metrics (click-through, adoption, retention) instead of opinion to decide what to keep or cut",
+          "Adopted Linear for backlog and roadmap management for the team's speed and clarity"
+        ]
+      },
+      "results": {
+        "launched": "2024 (FTP mode); Drops program continued through May 2025",
+        "headline": "New states, no real-money risk",
+        "metrics": {
+          "metric1": "Launched successfully in non-paid states",
+          "metric2": "FTP mode well received, laying the foundation for long-term engagement",
+          "metric3": "Established a repeatable model for event-based 'Drops' minigames"
+        },
+        "businessOutcome": "Enabled the company to expand its user base into new states without legal risk, backed by a fully data-driven UX research process."
+      },
+      "learnings": [
+        "Consumer products require fast learning loops and careful attention to user motivation.",
+        "MVP scope needs to balance speed to market with enough product depth to make the experience meaningful.",
+        "Post-launch iteration is part of product development, not an afterthought."
+      ],
+      "metadata": {
+        "outcomes": ["shipped"],
+        "skills": ["regulatory-compliance", "ux-research", "ab-testing", "gamification"],
+        "companyType": "Fantasy Sports / Gaming",
+        "teamSize": 7
       }
     },
     {
@@ -214,10 +219,10 @@
       "domain": "Social / Community",
       "duration": "September 2022 – February 2024",
       "status": "Shipped",
-      "shortDescription": "A social app designed to help people reconnect with strangers they encountered in fleeting, real-life moments — location-based matching, in-app chat, and a freemium model.",
+      "shortDescription": "A social app designed to help people reconnect with strangers they encountered in fleeting, real-life moments, using location-based matching, in-app chat, and a freemium model.",
       "problem": {
-        "situation": "People frequently have brief, meaningful encounters with strangers — on the street, on public transit, in cafés — but have no way to reconnect afterward. Traditional dating apps don't cover this use case.",
-        "businessContext": "There was a largely untapped market for this kind of community connection, and existing competitors — dating apps, general social networks — didn't address the 'missed connection' problem directly.",
+        "situation": "People frequently have brief, meaningful encounters with strangers (on the street, on public transit, in cafés) but have no way to reconnect afterward. Traditional dating apps don't cover this use case.",
+        "businessContext": "There was a largely untapped market for this kind of community connection, and existing competitors (dating apps, general social networks) didn't address the 'missed connection' problem directly.",
         "userPain": "Users lost potential connections because they had no tool to describe and search for someone they'd briefly crossed paths with, and no safe, structured way to reach out.",
         "metric": "Match success rate and engagement with connection requests"
       },
@@ -288,7 +293,7 @@
       "status": "Shipped",
       "shortDescription": "Multi-role platform enabling customers to order food from ghost kitchens, companies to organize catering with subsidies, and kitchen teams to manage orders and preparation in real time.",
       "problem": {
-        "situation": "Colony Cooks runs ghost kitchens in Los Angeles, but had no unified platform for order routing, corporate meal management, or kitchen workflow — orders were tracked manually.",
+        "situation": "Colony Cooks runs ghost kitchens in Los Angeles, but had no unified platform for order routing, corporate meal management, or kitchen workflow; orders were tracked manually.",
         "businessContext": "The ghost-kitchen market was growing but fragmented: companies needed an efficient way to manage subsidized team meals, and kitchen teams needed real-time visibility into what to prepare and when.",
         "userPain": "Customers had no single ordering interface, companies had no way to configure subsidized team meals, and kitchen staff spent time manually organizing orders instead of preparing food.",
         "metric": "Order accuracy and kitchen turnaround time → target: real-time, low-friction order tracking"
@@ -303,11 +308,11 @@
           "A multi-role permission system separating customers, company admins, and kitchen staff"
         ],
         "technicalDecisions": {
-          "decision": "Gave each role — customer, company admin, kitchen staff — its own backend logic rather than one shared model with role-based permissions",
+          "decision": "Gave each role (customer, company admin, kitchen staff) its own backend logic rather than one shared model with role-based permissions",
           "rationale": "Kitchen-display tablets needed a different data model and permission set than the customer-facing apps",
           "tradeoff": "More infrastructure to maintain, in exchange for real-time order updates and a kitchen workflow built around how kitchen staff actually worked"
         },
-        "mvpScope": "All three platforms — B2C, B2B, and Kitchen Manager — shipped together with full Stripe and email integration; mobile apps and advanced analytics were deferred to a later phase"
+        "mvpScope": "All three platforms (B2C, B2B, and Kitchen Manager) shipped together with full Stripe and email integration; mobile apps and advanced analytics were deferred to a later phase"
       },
       "myRole": {
         "title": "Product Manager",
@@ -348,209 +353,204 @@
       }
     },
     {
-      "id": "pricepicks",
+      "id": "gold-by-gold",
       "order": 6,
-      "logo": "/logos/pricepicks.png",
-      "title": "PrizePicks – Free-to-Play Game Mode & Seasonal Drops",
-      "domain": "Fantasy Sports / Gaming",
-      "duration": "February 2024 – May 2025",
+      "logo": "/logos/gold-by-gold.png",
+      "title": "Gold by Gold – Gold Traceability & Compliance Platform",
+      "domain": "Supply Chain / Regulatory",
+      "duration": "2021 – 2022",
       "status": "Shipped",
-      "shortDescription": "Free-to-play mode for a leading fantasy sports app, letting it legally expand into non-paid states with streaks and event-based minigames instead of real-money betting.",
+      "shortDescription": "Centralized platform to legalize and trace gold from three sourcing channels in Colombia through export to Europe, replacing fully manual, audit-vulnerable paperwork.",
       "problem": {
-        "situation": "PrizePicks operated in paid U.S. states, but regulatory restrictions on monetary betting blocked expansion into non-paid states.",
-        "businessContext": "The company needed a free-to-play version that kept the core game's engagement without involving money, in order to reach new markets legally.",
-        "userPain": "Users in non-paid states had no way to engage with the core game experience at all.",
-        "metric": "User base expansion into non-paid states without legal risk"
+        "situation": "Gold came in through three very different channels (subsistence mining, recycled jewelry, and industrial mining), each with its own documentation, and none of it centralized.",
+        "businessContext": "Exporting to Europe legally requires proving where every ounce of gold came from. Manual paperwork couldn't satisfy that bar or scale with volume.",
+        "userPain": "Five-plus internal teams (tesorería, radicación, cobros, exportaciones, operations) each ran a different undocumented workflow with no shared source of truth.",
+        "metric": "Regulatory risk → target: audit-ready traceability, near zero risk"
       },
       "solution": {
-        "approach": "Built a free-to-play mode around daily picks, streaks, leaderboards, and event-based minigames tied to real-world sports and pop-culture moments.",
+        "approach": "Built a centralized platform to collect provider documentation, run gold through a structured legalization workflow, and generate audit-ready traceability reports.",
         "keyFeatures": [
-          "A daily pick game where users choose from a rotating set of cards and make an Over/Under prediction",
-          "Live scoring during the actual game",
-          "Streak tracking and leaderboard competition",
-          "Themed minigames ('Drops') tied to major sports and pop-culture events",
-          "Recurring bonus-streak events tied to specific days and themes"
+          "Centralized document collection per provider across all three sourcing channels",
+          "Gold legalization workflow (weigh-in → processing → export documentation)",
+          "Inventory dashboard tracking gold bars through each stage",
+          "Traceability reporting built for European auditors"
         ],
         "technicalDecisions": {
-          "decision": "Ran moderated live user interviews and A/B tests before locking UI decisions",
-          "rationale": "A fully staffed UX research team meant decisions could be data-driven instead of opinion-driven",
-          "tradeoff": "Slower to ship individual UI changes, but higher confidence each change actually improved usability"
+          "decision": "Pushed the providers/documentation module into production with the tesorería team before the full legalization module was finished",
+          "rationale": "The founders needed to see the system working with real employees, not another promise",
+          "tradeoff": "Ran the legacy manual process and the new system in parallel during rollout, adding short-term overhead"
         },
-        "mvpScope": "Daily pick game, streaks, leaderboard, and the first seasonal Drop shipped first; an expanded Drop calendar and deeper personalization were deferred"
+        "mvpScope": "Providers and document-radication module shipped to production; the legalization module was still in development at handoff, with exports and advanced reporting deferred to a later phase"
       },
       "myRole": {
         "title": "Product Manager",
         "responsibilities": [
-          "Coordinated cross-functionally across marketing, research, design, internal developers, and DualBoot",
-          "Gathered requirements and kept the roadmap aligned across teams",
-          "Supported the design team with clear problem definitions and success metrics",
-          "Participated in live moderated user interviews and unassisted usability testing",
-          "Ran sprint planning, backlog triage, and delivery QA"
+          "Ran discovery remotely across five-plus internal stakeholder workflows, staying close through calls and continuous follow-up",
+          "Worked closely with two founders who had no prior software background and preferred concrete demonstrations over process explanations",
+          "Replaced formal spec meetings with twice-weekly, 20-minute live demos and short recorded explainer videos",
+          "Pushed for an early production release so founders could see their own employees using the system",
+          "Documented decisions and architecture thoroughly for a clean handoff to the next PM"
         ],
         "keyDecisions": [
-          "Prioritized entertainment mechanics — streaks, Drops — over betting-adjacent framing to stay compliant",
-          "Used real usage metrics (click-through, adoption, retention) instead of opinion to decide what to keep or cut",
-          "Adopted Linear for backlog and roadmap management for the team's speed and clarity"
+          "Chose tangible demos and videos over trying to explain agile methodology to non-technical founders",
+          "Released the MVP into production before it was fully complete, to build trust through momentum",
+          "Scoped advanced reporting into a later phase to protect the core delivery timeline",
+          "Handed the project off cleanly to another PM once scope grew toward a resellable product"
         ]
       },
       "results": {
-        "launched": "2024 (FTP mode); Drops program continued through May 2025",
-        "headline": "New states, no real-money risk",
+        "launched": "2022 (providers/radication module in production; legalization module handed off in progress)",
+        "headline": "Audit-ready traceability",
         "metrics": {
-          "metric1": "Launched successfully in non-paid states",
-          "metric2": "FTP mode well received, laying the foundation for long-term engagement",
-          "metric3": "Established a repeatable model for event-based 'Drops' minigames"
+          "metric1": "Provider documentation: scattered paperwork → 100% centralized",
+          "metric2": "Permit verification: fully manual → automated",
+          "metric3": "Regulatory risk: high → near zero"
         },
-        "businessOutcome": "Enabled the company to expand its user base into new states without legal risk, backed by a fully data-driven UX research process."
+        "businessOutcome": "Founders saw enough traction to consider turning the internal platform into a resellable product. The project transitioned to another PM with full documentation of decisions, architecture, and stakeholder relationships."
       },
       "learnings": [
-        "Consumer products require fast learning loops and careful attention to user motivation.",
-        "MVP scope needs to balance speed to market with enough product depth to make the experience meaningful.",
-        "Post-launch iteration is part of product development, not an afterthought."
+        "Complexity often comes from the interaction between people, workflows, and constraints, not from feature count.",
+        "Discovery means understanding the reality behind a request before defining the solution.",
+        "Stakeholder confidence can be built through tangible progress rather than process explanations alone.",
+        "Different users can need different experiences while still participating in one connected product."
       ],
       "metadata": {
-        "outcomes": ["shipped"],
-        "skills": ["regulatory-compliance", "ux-research", "ab-testing", "gamification"],
-        "companyType": "Fantasy Sports / Gaming",
-        "teamSize": 7
+        "outcomes": ["shipped", "handed-off"],
+        "skills": ["regulatory-compliance", "stakeholder-management", "discovery", "handoff"],
+        "companyType": "Mining / Precious Metals Export",
+        "teamSize": 5
       }
     },
     {
-      "id": "national-media",
+      "id": "raio",
       "order": 7,
-      "logo": "/logos/national-media.png",
-      "title": "National Media – AI-Powered Media Automation",
-      "domain": "AdTech / AI Automation",
-      "duration": "2025 – 2026",
+      "logo": "/logos/raio.png",
+      "title": "Raio – Spaced Repetition Language Learning App",
+      "domain": "EdTech / Mobile",
+      "duration": "2021 – 2022",
       "status": "Shipped",
-      "shortDescription": "Two AI-powered initiatives for a national media client — automating media planning and accelerating competitive advertising analysis — that cut manual work while keeping planners and analysts in the loop.",
+      "shortDescription": "A science-backed, non-gamified alternative to Duolingo: mobile flashcards using spaced repetition, shipped on iOS and Android for a YouTube language-learning influencer.",
       "problem": {
-        "situation": "Media planners were manually extracting rate-card data, matching it against audience data, and building media buys by hand against strict business rules — a process that could take most of a day. Separately, competitive advertising analysis was also largely manual and slow to turn around.",
-        "businessContext": "National Media wanted to reduce manual work across two related but distinct workflows — media planning and competitive advertising analysis — without removing human expertise from either one.",
-        "userPain": "Manual matching and buy-building was slow and error-prone, with no systematic way to validate a proposed buy against business rules, and no fast way to analyze competitor advertising activity.",
-        "metric": "Manual process time → target: several times faster while keeping planners and analysts in the loop"
+        "situation": "The client had a clear vision for a spaced-repetition learning app but no spec, no wireframes, and no technical plan.",
+        "businessContext": "The client had built an engaged YouTube audience around learning English and wanted a product that matched their teaching style, not a gamified app.",
+        "userPain": "Language learners wanted an efficient way to actually retain what they studied, not streaks and badges.",
+        "metric": "Time-to-market → target: ship on both app stores within a year"
       },
       "solution": {
-        "approach": "Two AI-powered initiatives with the same client stakeholder group: MediaBuyer, which automates media planning by extracting rate-card data and generating buys validated against business rules, and Competitive Automation, which speeds up competitive advertising analysis. Both keep a human review step before AI output is finalized.",
+        "approach": "Translated the client's vision into Miro wireframes (swipeable flashcards driven by a spaced-repetition algorithm), then handed off to Celerik's design team for high-fidelity design and build.",
         "keyFeatures": [
-          "Automated extraction and matching of rate-card and audience data",
-          "AI-generated media buys checked against business rules before being finalized",
-          "A human-in-the-loop review step for lower-confidence AI outputs",
-          "Automated competitive advertising analysis feeding into faster campaign creation",
-          "Status visibility for planners throughout each process"
+          "Spaced-repetition scheduling engine",
+          "Swipe/tap flashcard interaction",
+          "Multi-language support",
+          "Published on the Apple App Store and Google Play"
         ],
         "technicalDecisions": {
-          "decision": "Built MediaBuyer as two independent pipeline stages instead of one continuous flow",
-          "rationale": "Lets either stage retry or restart on failure without losing the other stage's completed work",
-          "tradeoff": "More orchestration complexity up front, in exchange for more resilience against failures in the external systems each stage depends on"
+          "decision": "Started with the Google Translate API instead of a premium translation service",
+          "rationale": "Faster and cheaper to ship an MVP",
+          "tradeoff": "The client pushed back mid-project on translation quality, forcing a scope renegotiation that cost 2–3 sprints"
         },
-        "mvpScope": "MediaBuyer: rate-card upload through buy generation, human review, and export. Competitive Automation: automated competitive analysis feeding into campaign creation. Deferred: full history/reporting views and multi-market batching for MediaBuyer."
+        "mvpScope": "Core flashcard engine + spaced repetition + both store submissions; deferred a premium translation provider and social features"
       },
       "myRole": {
         "title": "Product Manager",
         "responsibilities": [
-          "Translated ambiguous business needs into clearer product questions and priorities across both initiatives",
-          "Connected National Media's domain experts with engineering and QA so business expectations and technical constraints were discussed in the same context",
-          "Defined confidence thresholds for AI outputs, routing lower-confidence results to manual review instead of treating AI output as simply done or not done",
-          "Translated media-buying terminology into concrete rules engineering could validate against",
-          "Supported alignment across both initiatives with the same client stakeholder group while keeping their goals distinct",
-          "Aligned a cross-functional team spanning backend, frontend, and QA"
+          "Ran discovery in Miro, turning the client's verbal vision into concrete wireframes and user flows",
+          "Negotiated scope creep, most notably a mid-project push to swap translation providers",
+          "Learned mobile fundamentals from scratch: iOS vs. Android differences, responsive constraints, App Store and Google Play submission mechanics",
+          "Used the app personally, on a daily learning routine, to validate the experience firsthand"
         ],
         "keyDecisions": [
-          "Kept human review in the loop for lower-confidence AI matches rather than fully automating the decision",
-          "Scoped advanced reporting and batching out of the first release to protect the launch timeline",
-          "Prioritized reliability and audit trails over adding more automation features"
+          "Held the MVP line on the translation-service scope-creep request rather than absorbing an unbudgeted 2–3 sprint detour",
+          "Personally tested the product to catch UX confusion before it reached users",
+          "Managed the handoff from the wireframes to Celerik's internal design team"
         ]
       },
       "results": {
-        "launched": "2025 – 2026",
-        "headline": "5x+ and 3x faster",
+        "launched": "2022",
+        "headline": "Live on iOS & Android",
         "metrics": {
-          "metric1": "MediaBuyer: a process that previously took almost a full day reduced to a workflow reported as 5x+ faster",
-          "metric2": "Competitive Automation: campaign creation speed improved by approximately 3x",
-          "metric3": "Both initiatives launched with manual effort reduced while human expertise remained part of the workflow"
+          "metric1": "Shipped on both iOS and Android",
+          "metric2": "MVP scope held despite repeated scope-creep pressure",
+          "metric3": "Mobile release process completed successfully on both the App Store and Google Play"
         },
-        "businessOutcome": "Both AI-powered initiatives launched successfully, meaningfully reducing manual work in media planning and competitive analysis while keeping planners and analysts in the loop."
+        "businessOutcome": "Delivered a working MVP end-to-end, from discovery wireframes to store submission, for a client with high expectations and a fast timeline."
       },
       "learnings": [
-        "AI product management is not only about the model; it's about connecting technology to a meaningful problem.",
-        "Ambiguous AI projects benefit from strong product framing and explicit success criteria.",
-        "A PM creates value by connecting different perspectives and helping the right people make better decisions.",
-        "Two products can use similar technology while requiring very different product thinking."
+        "Requirements should express the product intent, not just a feature list.",
+        "Scope conversations are more effective when trade-offs are explicit.",
+        "Using the product personally can reveal friction that is invisible in specifications."
       ],
       "metadata": {
         "outcomes": ["shipped"],
-        "skills": ["ai-product-management", "business-technology-alignment", "stakeholder-management", "human-in-the-loop"],
-        "companyType": "Media / AdTech",
-        "teamSize": 7
+        "skills": ["scope-management", "mobile", "discovery"],
+        "companyType": "EdTech / Creator Product",
+        "teamSize": 4
       }
     },
     {
-      "id": "awardees",
+      "id": "jaltech",
       "order": 8,
-      "logo": "/logos/awardees.png",
-      "title": "Awardees – Resource Management & Project Planning Platform",
-      "domain": "Enterprise SaaS / Workforce",
-      "duration": "June 2025 – Present",
-      "status": "In Progress",
-      "shortDescription": "Multi-tenant SaaS platform for organizations to plan projects, allocate people, and manage resource requests from a single system.",
+      "logo": "/logos/jaltech.png",
+      "title": "JalTech – E-Commerce Advisory Platform",
+      "domain": "E-Commerce / Retail",
+      "duration": "2020 – 2021",
+      "status": "Shipped",
+      "shortDescription": "Advisory module for a Colombian tech distributor that let customers self-serve and advisors act as order proxies, cutting billing time from hours to minutes.",
       "problem": {
-        "situation": "The client had no centralized way to plan projects, assign roles, track availability, or manage internal resource requests.",
-        "businessContext": "The long-term vision is a multi-tenant platform that scales beyond a single client to support broader internal team coordination.",
-        "userPain": "Teams couldn't see resource availability or allocation in real time, making planning and requests slow and error-prone.",
-        "metric": "Clean, testable MVP backlog covering core resource-planning functionality"
+        "situation": "Order-taking was 100% manual: a customer called an advisor, the advisor wrote the order down by hand, then it was keyed into billing later.",
+        "businessContext": "Colombia's e-commerce boom (2020–2021) was accelerating, but JalTech's advisors, spread across regions like Chocó, had no digital tools to keep up.",
+        "userPain": "Advisors spent over 60% of their time on admin instead of selling, and customers had no way to order without waiting for an advisor to be free.",
+        "metric": "Order-to-billing time → target: cut it dramatically"
       },
       "solution": {
-        "approach": "Built four core modules — Projects, People, Requests, and User Management — on a role-based, multi-tenant-ready architecture.",
+        "approach": "Built an advisory module: customers could self-serve their own orders, and advisors could act as a proxy, capturing customer data and mounting the order directly in the system, auto-billed.",
         "keyFeatures": [
-          "A people directory covering profiles, documents, roles, availability, skills, and allocation history",
-          "Project management covering project records, phases, and resource assignment by role",
-          "A requests module with a structured workflow for initiating and approving resource assignments",
-          "Availability and allocation planning with visibility into over- and under-allocation",
-          "A role-based permissions matrix separating Admins, Supervisors, and Read-only users"
+          "Self-service order creation for end customers",
+          "Advisor-as-proxy order entry with auto-billing",
+          "Automatic order confirmations",
+          "Order tracking dashboard"
         ],
         "technicalDecisions": {
-          "decision": "Designed the data model and permissions system for multi-tenancy from day one, even though the first release serves a single client",
-          "rationale": "Retrofitting multi-tenancy later would mean rebuilding data isolation and permission logic from scratch",
-          "tradeoff": "More upfront design work before the first client-facing feature shipped"
+          "decision": "Build the module on top of WordPress, integrated with JalTech's existing billing system",
+          "rationale": "Fastest path to shipping without replacing infrastructure the client already depended on",
+          "tradeoff": "Tied future iterations to WordPress's plugin ecosystem, but avoided a costly re-platform"
         },
-        "mvpScope": "People, Projects, Requests, and User Management modules shipped first; a full multi-tenant onboarding flow for additional organizations was deferred"
+        "mvpScope": "Self-service ordering + advisor-as-proxy flow shipped first; checkout redesign, product descriptions, and mega menu came later as the platform evolved"
       },
       "myRole": {
-        "title": "Product Manager",
+        "title": "Product Manager (first formal PM role)",
         "responsibilities": [
-          "Helped define the initial MVP scope based on business needs and technical feasibility",
-          "Structured and maintained the backlog in Azure DevOps, split into small, testable, role-specific tasks",
-          "Worked directly with the client and designers to shape UX flows and user journeys",
-          "Defined system logic, field behavior, and validation rules across key modules",
-          "Supported AI-integration planning for role recommendations based on user attributes and onboarding data"
+          "Ran discovery remotely: regular calls and continuous follow-up with advisors and customers to map how they actually worked, not how a spec assumed they worked",
+          "Introduced iterative delivery to a client used to large upfront releases, showing that shipping something useful in 3 weeks and improving it after beats waiting 6 months for 'perfect'",
+          "Prioritized MVP scope around advisor impact first, customer impact second",
+          "Trained advisors during rollout and ran a continuous feedback loop to prioritize fixes"
         ],
         "keyDecisions": [
-          "Designed the People and Projects detail views around tabbed navigation for structured data",
-          "Chose to plan for multi-tenant scale from the MVP instead of retrofitting later",
-          "Aligned frontend/backend QA priorities each sprint to keep the backlog testable"
+          "Shipped the advisor-as-proxy flow before full customer self-service, because it unblocked revenue fastest",
+          "Built a recurring listening loop with advisors (demos + feedback sessions) instead of a one-time handoff",
+          "Held the line on 2-week sprints even when the client pushed for a single big-bang release"
         ]
       },
       "results": {
-        "launched": "Ongoing (MVP modules delivered, platform in active development)",
-        "headline": "4 core modules shipped",
+        "launched": "2021",
+        "headline": "Billing time cut ~5x",
         "metrics": {
-          "metric1": "Delivered a clean, testable MVP backlog covering core functionality",
-          "metric2": "Four core modules shipped: People, Projects, Requests, User Management",
-          "metric3": "AI-assisted role-matching logic scoped for onboarding"
+          "metric1": "Billing time: 2–3 hours → 15–30 minutes per order",
+          "metric2": "Advisor adoption: feature was actively requested, not just tolerated",
+          "metric3": "Engagement: single project → 18+ months of ongoing platform evolution work"
         },
-        "businessOutcome": "Built stakeholder trust and alignment by documenting and validating each interaction flow, setting up the platform to scale into a true multi-tenant product."
+        "businessOutcome": "Codebulls went from a one-off vendor to JalTech's long-term platform partner, later redesigning checkout, product descriptions, and category navigation."
       },
       "learnings": [
-        "Designing for multi-tenancy from day one avoids costly rework once a platform is meant to scale beyond a single client.",
-        "Breaking a backlog into small, testable, role-specific tasks keeps delivery predictable as scope grows.",
-        "Documenting and validating each interaction flow builds stakeholder trust as much as shipping features does."
+        "The feature is rarely the real problem; the surrounding workflow often is.",
+        "Operational complexity needs to be understood before designing the interface.",
+        "Discovery can be deep even when it happens remotely."
       ],
       "metadata": {
-        "outcomes": ["in-progress"],
-        "skills": ["saas-architecture", "resource-planning", "stakeholder-management", "system-design"],
-        "companyType": "Enterprise SaaS / Resource Management",
-        "teamSize": 6
+        "outcomes": ["shipped", "ongoing"],
+        "skills": ["discovery", "change-management", "stakeholder-management", "platform-evolution"],
+        "companyType": "Tech Distributor / B2B Wholesale",
+        "teamSize": 4
       }
     }
   ]

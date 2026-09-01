@@ -171,6 +171,24 @@
   filter: grayscale(0) contrast(1);
 }
 
+.hero-nickname {
+  position: absolute;
+  top: 4%;
+  right: -2%;
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 15px;
+  background: var(--bg);
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  border-radius: 999px;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 13px;
+  color: var(--lilac-bright);
+  white-space: nowrap;
+  animation: fadeIn 1000ms 500ms both;
+}
+
 .hero-availability {
   position: absolute;
   bottom: -4%;
