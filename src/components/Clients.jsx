@@ -3,6 +3,7 @@ import { useLanguage } from '../contexts/LanguageContext'
 import projectsEn from '../data/projects.json'
 import projectsEs from '../data/projects.es.json'
 import { getCategoryForProject } from '../utils/categoryLookup'
+import Tilt from './Tilt'
 import './Clients.css'
 
 const PROJECTS_BY_LANGUAGE = {
@@ -48,29 +49,29 @@ export default function Clients() {
 
   return (
     <section className="clients">
-      <div className="clients-inner">
-        <p className="clients-label">{t('clients.label')}</p>
+      <p className="clients-label">{t('clients.label')}</p>
 
-        <div className="clients-marquee">
-          <div className="clients-track" role="list" aria-label={t('clients.label')}>
-            {track.map((project, i) => {
-              const isDuplicate = i >= clients.length
-              const accentColor = getCategoryForProject(project.id)?.color || 'var(--lilac-dark)'
-              const logoSrc = CAROUSEL_LOGO_OVERRIDES[project.id] || project.logo
-              return (
-                <div
-                  key={`${project.id}-${i}`}
-                  className="clients-logo"
-                  role="listitem"
-                  aria-hidden={isDuplicate || undefined}
-                  style={{ '--accent-color': accentColor }}
-                  title={project.title}
-                >
-                  <img src={logoSrc} alt={isDuplicate ? '' : project.title} loading="lazy" />
-                </div>
-              )
-            })}
-          </div>
+      <div className="clients-marquee">
+        <div className="clients-track" role="list" aria-label={t('clients.label')}>
+          {track.map((project, i) => {
+            const isDuplicate = i >= clients.length
+            const accentColor = getCategoryForProject(project.id)?.color || 'var(--lilac)'
+            const logoSrc = CAROUSEL_LOGO_OVERRIDES[project.id] || project.logo
+            return (
+              <Tilt
+                as="div"
+                depth={0.6}
+                key={`${project.id}-${i}`}
+                className="clients-tile"
+                role="listitem"
+                aria-hidden={isDuplicate || undefined}
+                style={{ '--accent-color': accentColor }}
+                title={project.title}
+              >
+                <img src={logoSrc} alt={isDuplicate ? '' : project.title} loading="lazy" />
+              </Tilt>
+            )
+          })}
         </div>
       </div>
     </section>

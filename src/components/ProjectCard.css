@@ -1,632 +1,168 @@
 .project-card {
-  --accent-color: var(--lilac-dark);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-left: 6px solid var(--lilac-dark);
-  border-radius: var(--radius-lg);
-  padding: 2rem;
-  transition: all var(--transition-bounce);
+  --accent-color: var(--lilac);
   position: relative;
   overflow: hidden;
-}
-
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background: linear-gradient(90deg, var(--lilac-dark), var(--blue-bright), var(--cyan-bright));
-  opacity: 0;
-  transition: opacity var(--transition-fast);
+  text-align: left;
+  cursor: pointer;
+  font-family: inherit;
+  color: inherit;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(155deg, var(--bg-card) 0%, var(--bg-card-2) 100%);
+  padding: clamp(18px, 2vw, 26px);
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.6vw, 20px);
+  box-shadow: 0 26px 54px rgba(0, 0, 0, 0.5);
+  transition: border-color 300ms ease;
 }
 
 .project-card:hover {
-  box-shadow: 0 12px 40px rgba(167, 139, 250, 0.35), 0 0 20px rgba(96, 165, 250, 0.2);
-  border-left-width: 8px;
-  transform: translateY(-6px);
-  border-color: rgba(96, 165, 250, 0.4);
+  border-color: rgba(200, 255, 61, 0.4);
 }
 
-.project-card:hover::before {
-  opacity: 1;
-}
-
-.project-card.is-expanded {
-  border-left-width: 8px;
-  box-shadow: 0 12px 40px rgba(167, 139, 250, 0.25);
-}
-
-.project-card.is-expanded::before {
-  opacity: 1;
-}
-
-.project-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.25rem;
-  margin-bottom: 1rem;
-  cursor: pointer;
-}
-
-/* Logo / initials badge — an animated conic-gradient ring in the project's
-   category color gives every mark a consistent "tech" frame regardless of
-   the source logo's own colors, and spins up on hover/expand. */
-.project-visual {
-  position: relative;
-  width: 56px;
-  height: 56px;
-  border-radius: var(--radius-md);
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.project-visual::before {
-  content: '';
+.project-card-glow {
   position: absolute;
-  inset: -3px;
-  border-radius: calc(var(--radius-md) + 4px);
-  background: conic-gradient(from 0deg, var(--accent-color), transparent 30%, var(--accent-color) 70%, transparent 100%);
-  opacity: 0.4;
-  animation: logo-ring-spin 7s linear infinite;
-  transition: opacity var(--transition-fast);
+  inset: 0;
   pointer-events: none;
+  background: radial-gradient(80% 60% at 80% 0%, rgba(167, 139, 250, 0.16) 0%, transparent 70%);
 }
 
-.project-card:hover .project-visual::before,
-.project-card.is-expanded .project-visual::before {
-  opacity: 1;
-  animation-duration: 3s;
-}
-
-@keyframes logo-ring-spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.project-logo {
+.project-card-top {
   position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  padding: 8px;
-  object-fit: contain;
-  background: var(--bg-hover);
-  border: 1px solid var(--border);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.project-card-badge {
+  width: 52px;
+  height: 52px;
+  flex: none;
   border-radius: var(--radius-md);
-  transition: transform var(--transition-bounce), box-shadow var(--transition-fast), border-color var(--transition-fast);
-}
-
-.project-card:hover .project-logo,
-.project-card.is-expanded .project-logo {
-  transform: scale(1.08) rotate(-2deg);
-  border-color: color-mix(in srgb, var(--accent-color) 55%, var(--border));
-  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent-color) 35%, transparent);
-}
-
-.project-logo-fallback {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--border);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  background: color-mix(in srgb, var(--accent-color) 16%, var(--bg-card));
-  border: 2px solid var(--accent-color);
-  color: var(--text);
-  font-weight: 800;
-  font-size: 0.95rem;
-  letter-spacing: 0.3px;
-  font-family: var(--mono);
-  transition: transform var(--transition-bounce), box-shadow var(--transition-fast);
-}
-
-.project-card:hover .project-logo-fallback,
-.project-card.is-expanded .project-logo-fallback {
-  transform: scale(1.08);
-  box-shadow: 0 0 16px color-mix(in srgb, var(--accent-color) 45%, transparent);
-}
-
-.project-meta {
-  flex: 1;
-  min-width: 0;
-}
-
-.project-year {
-  display: inline-block;
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  font-weight: 600;
-  font-family: var(--mono);
-  margin-bottom: 0.5rem;
-}
-
-.project-title {
-  font-size: 1.4rem;
-  font-weight: 800;
-  color: var(--text);
-  margin: 0.5rem 0 0;
-  line-height: 1.3;
-  letter-spacing: -0.3px;
-}
-
-/* Always-visible headline stat pill — the "dynamic at a glance" element */
-.project-headline {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  flex-shrink: 0;
-  align-self: center;
-  font-size: 0.78rem;
-  font-weight: 700;
-  color: var(--text);
-  background: color-mix(in srgb, var(--accent-color) 18%, var(--bg-hover));
-  border: 1px solid color-mix(in srgb, var(--accent-color) 45%, transparent);
-  padding: 0.45rem 0.85rem;
-  border-radius: 999px;
-  white-space: nowrap;
-}
-
-.project-headline-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent-color);
-  box-shadow: 0 0 8px 1px var(--accent-color);
-  flex-shrink: 0;
-}
-
-.expand-btn {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid var(--lilac-dark);
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.12) 0%, rgba(96, 165, 250, 0.12) 100%);
-  color: var(--lilac-bright);
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all var(--transition-bounce);
-  flex-shrink: 0;
-  font-weight: bold;
-}
-
-.expand-btn:hover {
-  background: var(--gradient-brand);
-  color: white;
-  transform: scale(1.15) rotate(90deg);
-  box-shadow: 0 8px 16px rgba(167, 139, 250, 0.4);
-}
-
-.project-card.is-expanded .expand-btn {
-  transform: rotate(45deg);
-}
-
-.project-card.is-expanded .expand-btn:hover {
-  transform: rotate(135deg) scale(1.15);
-}
-
-.project-description {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  margin: 1rem 0;
-  line-height: 1.7;
-}
-
-.project-tags {
-  display: flex;
-  gap: 0.75rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
-}
-
-.tag {
-  display: inline-block;
-  font-size: 0.75rem;
-  padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.2) 0%, rgba(96, 165, 250, 0.2) 100%);
-  color: var(--lilac-bright);
-  border-radius: var(--radius-sm);
-  font-weight: 700;
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  text-transform: uppercase;
-  letter-spacing: 0.3px;
-  transition: all 200ms ease;
-}
-
-.tag:hover {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.3) 0%, rgba(96, 165, 250, 0.3) 100%);
-  border-color: rgba(167, 139, 250, 0.5);
-}
-
-.tag-status {
-  background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(6, 182, 212, 0.2) 100%);
-  color: #6ee7b7;
-  border-color: rgba(52, 211, 153, 0.35);
-}
-
-.tag-outline {
-  background: transparent;
-  color: var(--text-muted);
-  border-color: var(--border);
-}
-
-/* Expanded content — always mounted, animated via max-height so it can transition smoothly */
-.project-expanded {
-  border-top: 1px solid var(--border);
-  max-height: 0;
   overflow: hidden;
-  transition: max-height var(--transition-smooth), padding-top var(--transition-smooth), margin-top var(--transition-smooth);
-  padding-top: 0;
-  margin-top: 0;
 }
 
-.project-expanded.active {
-  max-height: 3000px;
-  padding-top: 1.5rem;
-  margin-top: 1.5rem;
+.project-card-badge img {
+  max-width: 32px;
+  max-height: 32px;
+  object-fit: contain;
 }
 
-/* Tab bar */
-.project-tabbar {
-  display: flex;
-  gap: 0.4rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.25rem;
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.75rem;
-}
-
-.tab-btn {
-  appearance: none;
-  border: 1px solid transparent;
-  background: transparent;
-  color: var(--text-muted);
-  font-size: 0.82rem;
+.project-card-initials {
+  font-family: var(--sans);
+  font-size: 13px;
   font-weight: 700;
-  padding: 0.5rem 0.9rem;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all var(--transition-fast);
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+}
+
+.project-card-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 7px;
+}
+
+.project-card-num {
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
   white-space: nowrap;
 }
 
-.tab-btn:hover {
-  color: var(--text);
-  background: var(--bg-hover);
-}
-
-.tab-btn.active {
-  color: var(--bg);
-  background: var(--gradient-brand);
-  box-shadow: 0 4px 14px rgba(167, 139, 250, 0.35);
-}
-
-.tab-btn:focus-visible {
-  outline: 2px solid var(--lilac-bright);
-  outline-offset: 2px;
-}
-
-/* Panel */
-.project-panel {
-  min-height: 80px;
-}
-
-.panel-grid {
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-}
-
-.panel-grid-two {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-
-@media (max-width: 640px) {
-  .panel-grid-two {
-    grid-template-columns: 1fr;
-  }
-}
-
-.info-block h5,
-.decision-card h5,
-.learning-card h5 {
-  font-size: 0.78rem;
-  font-weight: 800;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  margin-bottom: 0.5rem;
-}
-
-.info-block p {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-  margin: 0;
-}
-
-.feature-list,
-.bullet-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-}
-
-.feature-list li,
-.bullet-list li {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  padding-left: 1.3rem;
-  position: relative;
-}
-
-.feature-list li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5em;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent-color);
-}
-
-.bullet-list li::before {
-  content: '→';
-  position: absolute;
-  left: 0;
-  color: var(--lilac-bright);
-  font-weight: 700;
-}
-
-.bullet-list-accent li::before {
-  color: var(--cyan-bright);
-}
-
-/* Technical decision card */
-.decision-card {
-  background: var(--bg-hover);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 1.1rem 1.25rem;
-}
-
-.decision-card > p {
-  font-size: 0.95rem;
-  color: var(--text);
+.project-card-category {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-size: 9px;
   font-weight: 600;
-  margin-bottom: 0.85rem;
-  line-height: 1.6;
+  letter-spacing: 0.1em;
+  border: 1px solid;
+  white-space: nowrap;
 }
 
-.decision-row {
+.project-card-body {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.3rem;
-  margin-top: 0.6rem;
+  gap: 10px;
 }
 
-.decision-row p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  margin: 0;
-  line-height: 1.6;
-}
-
-.decision-tag {
-  display: inline-block;
-  width: fit-content;
-  font-size: 0.68rem;
-  font-weight: 800;
+.project-card-domain {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-faint);
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  padding: 0.2rem 0.55rem;
-  border-radius: var(--radius-sm);
-  background: rgba(167, 139, 250, 0.18);
-  color: var(--lilac-bright);
 }
 
-.decision-tag-alt {
-  background: rgba(244, 114, 182, 0.18);
-  color: var(--magenta-neon);
+.project-card-rule {
+  width: 18px;
+  height: 1px;
+  flex: none;
 }
 
-/* Metric / target badge */
-.metric-badge {
+.project-card-title {
+  font-family: var(--serif);
+  font-size: clamp(24px, 2.2vw, 34px);
+  line-height: 1.06;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.project-card-headline {
+  font-size: 13.5px;
+  line-height: 1.58;
+  color: var(--text-tertiary);
+  text-wrap: pretty;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.project-card-footer {
   display: flex;
   align-items: baseline;
-  gap: 0.6rem;
-  flex-wrap: wrap;
-  font-size: 0.92rem;
-  color: var(--text);
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
-  border: 1px dashed rgba(167, 139, 250, 0.4);
-  border-radius: var(--radius-md);
-  padding: 0.75rem 1rem;
-}
-
-.metric-badge-label {
-  font-size: 0.7rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: var(--lilac-bright);
-}
-
-/* Results stat grid */
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 0.85rem;
-}
-
-.stat-card {
-  background: var(--bg-hover);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  padding: 1rem;
-  display: flex;
-  gap: 0.6rem;
-  align-items: flex-start;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.stat-card:hover {
-  border-color: var(--accent-color);
-  transform: translateY(-3px);
-}
-
-.stat-card-index {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--accent-color);
-  flex-shrink: 0;
-}
-
-.stat-card p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.55;
-  margin: 0;
-}
-
-/* Learnings — proof points pulled from project documentation */
-.learnings-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-}
-
-.learning-card {
-  display: flex;
-  gap: 0.75rem;
-  align-items: flex-start;
-  border-radius: var(--radius-md);
-  padding: 1.1rem;
-  border: 1px solid var(--border);
-  border-left: 3px solid var(--accent-color);
-  background: var(--bg-hover);
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
-}
-
-.learning-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent-color);
-}
-
-.learning-index {
-  font-family: var(--mono);
-  font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--accent-color);
-  flex-shrink: 0;
-}
-
-.learning-card p {
-  font-size: 0.88rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Footer meta bar (always visible once expanded, regardless of active tab) */
-.project-footer-meta {
-  margin-top: 1.5rem;
-  padding-top: 1.25rem;
+  gap: 9px;
   border-top: 1px solid var(--border);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  padding-top: 14px;
+  margin-top: auto;
 }
 
-.meta-chip {
-  font-size: 0.82rem;
-  color: var(--text-secondary);
+.project-card-kpi {
+  font-family: var(--serif);
+  font-size: clamp(15px, 1.3vw, 19px);
+  line-height: 1.2;
+  color: var(--lime);
 }
 
-.meta-chip strong {
-  color: var(--text);
-  font-weight: 700;
+.project-card-arrow {
+  margin-left: auto;
+  flex: none;
+  font-family: var(--sans);
+  font-size: 12px;
+  color: var(--lime);
 }
 
-.skill-chips {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.skill-chip {
-  font-size: 0.72rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.3rem 0.7rem;
-  text-transform: capitalize;
-}
-
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .project-card {
-    padding: 1.5rem;
-  }
-
-  .project-header {
-    flex-wrap: wrap;
-  }
-
-  .project-headline {
-    /* A 100% basis forces this onto its own wrapped line no matter how much
-       room the title/visual/expand-btn trio leaves on the first line — without
-       it, this pill's fixed (shrink:0) width was measured as fitting on line 1
-       alongside them, starving .project-meta down to 0 width and making the
-       title wrap one word per line. */
-    flex-basis: 100%;
-    order: 3;
-    margin-top: 0.5rem;
-  }
-
-  .expand-btn {
-    width: 36px;
-    height: 36px;
-  }
-
-  .project-visual {
-    width: 44px;
-    height: 44px;
-  }
-
-  .project-tabbar {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    /* Fade the trailing edge so a scrollable tab row reads as "more this way",
-       not as a tab label cut off mid-word. */
-    mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
-    -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
-    padding-right: 1.5rem;
-  }
-
-  .project-tabbar::-webkit-scrollbar {
-    display: none;
+    aspect-ratio: auto;
+    min-height: 300px;
   }
 }

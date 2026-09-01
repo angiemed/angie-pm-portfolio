@@ -1,96 +1,44 @@
-import { useEffect, useState } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
+import { useView } from '../contexts/ViewContext'
+import { BRAND_NAME } from '../constants'
 import './Header.css'
-
-// Every scrollable section maps to a nav entry. The four "expertise" sections
-// (contribution, toolkit, philosophy, lessons) share one nav item so the nav
-// stays compact while scroll-highlighting still tracks precisely.
-const SECTION_TO_NAV = {
-  home: 'home',
-  proyectos: 'proyectos',
-  about: 'about',
-  contribution: 'expertise',
-  toolkit: 'expertise',
-  philosophy: 'expertise',
-  lessons: 'expertise',
-  contacto: 'contacto',
-}
-const SECTION_IDS = Object.keys(SECTION_TO_NAV)
 
 export default function Header() {
   const { t, language, toggleLanguage } = useLanguage()
-  const [menuOpen, setMenuOpen] = useState(false)
-  const [activeSection, setActiveSection] = useState('home')
+  const { view, go } = useView()
 
   const navItems = [
-    { id: 'home', label: t('nav.home') },
-    { id: 'proyectos', label: t('nav.portfolio') },
-    { id: 'about', label: t('nav.about') },
-    { id: 'expertise', label: t('nav.expertise'), href: '#contribution' },
-    { id: 'contacto', label: t('nav.contact') },
+    { id: 'work', num: '01', label: t('nav.portfolio') },
+    { id: 'about', num: '02', label: t('nav.about') },
+    { id: 'expertise', num: '03', label: t('nav.expertise') },
+    { id: 'contact', num: '04', label: t('nav.contact') },
   ]
 
-  useEffect(() => {
-    const sections = SECTION_IDS.map((id) => document.getElementById(id)).filter(Boolean)
-    if (sections.length === 0) return
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries
-          .filter((entry) => entry.isIntersecting)
-          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)
-
-        if (visible.length > 0) {
-          setActiveSection(SECTION_TO_NAV[visible[0].target.id] || visible[0].target.id)
-        }
-      },
-      { rootMargin: '-45% 0px -45% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
-    )
-
-    sections.forEach((section) => observer.observe(section))
-    return () => observer.disconnect()
-  }, [])
-
   return (
-    <header className="header">
-      <div className="container">
-        <div className="header-content">
-          <div className="header-left">
-            <h1 className="logo">{t('hero.name')}</h1>
-            <p className="subtitle-header">{t('hero.title')}</p>
-          </div>
+    <header className="nav-header">
+      <button type="button" className="nav-logo" data-magnet="" onClick={() => go('work', t('nav.portfolio'))}>
+        <span className="nav-logo-text">{BRAND_NAME}</span>
+        <span className="nav-logo-dot" />
+      </button>
 
+      <nav className="nav-links" aria-label="Main">
+        {navItems.map((item) => (
           <button
-            className={`menu-toggle${menuOpen ? ' open' : ''}`}
-            onClick={() => setMenuOpen((open) => !open)}
-            aria-expanded={menuOpen}
-            aria-controls="main-nav"
-            aria-label="Toggle menu"
+            key={item.id}
+            type="button"
+            data-magnet=""
+            className={`nav-link${view === item.id ? ' active' : ''}`}
+            onClick={() => go(item.id, item.label)}
           >
-            <span />
-            <span />
-            <span />
+            <span className="nav-link-num">{item.num}</span>
+            <span className="nav-link-label">{item.label}</span>
           </button>
+        ))}
+      </nav>
 
-          <div id="main-nav" className={`header-right${menuOpen ? ' open' : ''}`}>
-            <nav className="main-nav" aria-label="Main">
-              {navItems.map((item) => (
-                <a
-                  key={item.id}
-                  href={item.href || `#${item.id}`}
-                  className={`nav-link${activeSection === item.id ? ' active' : ''}`}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
-            </nav>
-            <button onClick={toggleLanguage} className="lang-toggle">
-              {language === 'en' ? '🇪🇸 Español' : '🇺🇸 English'}
-            </button>
-          </div>
-        </div>
-      </div>
+      <button type="button" data-magnet="" className="lang-toggle" onClick={toggleLanguage}>
+        {language === 'en' ? 'ES' : 'EN'}
+      </button>
     </header>
   )
 }

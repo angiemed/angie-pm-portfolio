@@ -1,0 +1,14 @@
+.expertise-view {
+  padding: clamp(40px, 7vh, 88px) clamp(20px, 5vw, 72px) clamp(60px, 9vh, 110px);
+  max-width: 1560px;
+  margin: 0 auto;
+}
+
+.expertise-title {
+  margin-bottom: 12px;
+}
+
+.expertise-block + .expertise-block {
+  border-top: 1px solid var(--border-soft);
+  margin-top: 8px;
+}

@@ -12,7 +12,9 @@
       "title": "Product Manager & Project Manager",
       "subtitle": "Career Path & Portfolio",
       "description": "8 products delivered and in flight across B2C, B2B, SaaS, and regulated industries. Builder, strategist, and hands-on PM.",
-      "cta": "View My Work"
+      "cta": "View My Work",
+      "bannerLines": ["From uncertainty", "to a product", "ready to ship"],
+      "cvDownload": "Download CV"
     },
     "portfolio": {
       "title": "Product Work",
@@ -22,6 +24,18 @@
     },
     "clients": {
       "label": "Companies I've built products with"
+    },
+    "stats": {
+      "items": [
+        { "value": 15, "label": "Delivered projects" },
+        { "value": 10, "label": "Clients, US + Colombia" },
+        { "value": 5, "label": "Years of experience" }
+      ]
+    },
+    "panel": {
+      "caseStudy": "Case study",
+      "close": "Close",
+      "next": "Next case"
     },
     "sections": {
       "problem": "Problem",
@@ -177,7 +191,9 @@
       "title": "Product Manager & Project Manager",
       "subtitle": "Trayectoria Profesional y Portafolio",
       "description": "8 productos entregados y en desarrollo en B2C, B2B, SaaS e industrias reguladas. Builder, estratega, y PM hands-on.",
-      "cta": "Ver mi trabajo"
+      "cta": "Ver mi trabajo",
+      "bannerLines": ["De la incertidumbre", "a un producto", "listo para lanzar"],
+      "cvDownload": "Descargar CV"
     },
     "portfolio": {
       "title": "Trabajo en Productos",
@@ -187,6 +203,18 @@
     },
     "clients": {
       "label": "Empresas con las que he construido producto"
+    },
+    "stats": {
+      "items": [
+        { "value": 15, "label": "Proyectos entregados" },
+        { "value": 10, "label": "Clientes, EE.UU. + Colombia" },
+        { "value": 5, "label": "Años de experiencia" }
+      ]
+    },
+    "panel": {
+      "caseStudy": "Case study",
+      "close": "Cerrar",
+      "next": "Siguiente caso"
     },
     "sections": {
       "problem": "Problema",

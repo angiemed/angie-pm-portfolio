@@ -1,119 +1,99 @@
-.contact {
-  padding: 4rem 0 3rem;
-  text-align: center;
-}
-
-.contact h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.3px;
-}
-
-.contact-subtitle {
-  font-size: 1rem;
-  color: var(--text-muted);
-  margin: 0 0 1.25rem;
+.contact-view {
+  padding: clamp(50px, 11vh, 130px) clamp(20px, 5vw, 72px) clamp(60px, 9vh, 110px);
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1560px;
+  margin: 0 auto;
 }
 
 .contact-availability {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.78rem;
-  font-weight: 800;
+  gap: 10px;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--lime);
+  margin-bottom: 26px;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: #6ee7b7;
-  background: linear-gradient(135deg, rgba(52, 211, 153, 0.16) 0%, rgba(6, 182, 212, 0.16) 100%);
-  border: 1px solid rgba(52, 211, 153, 0.35);
-  border-radius: 999px;
-  padding: 0.45rem 1rem;
-  margin-bottom: 2.5rem;
 }
 
 .contact-availability-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #6ee7b7;
-  box-shadow: 0 0 8px 1px #6ee7b7;
-  flex-shrink: 0;
+  background: var(--lime);
+  animation: pulseDot 2.4s ease-in-out infinite;
 }
 
-.contact-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto;
+.contact-title {
+  margin-bottom: 12px;
+  max-width: 15ch;
 }
 
-.contact-link {
-  flex: 1;
-  min-width: 240px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 1.5rem;
-  background: var(--bg-card);
+.contact-subtitle {
+  font-size: 16px;
+  color: var(--text-tertiary);
+  margin: 0 0 44px;
+  max-width: 480px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(12px, 1.4vw, 18px);
+  perspective: 1300px;
+}
+
+.contact-card {
+  background: linear-gradient(160deg, var(--bg-card) 0%, var(--bg-card-2) 100%);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  text-decoration: none;
-  transition: all var(--transition-bounce);
+  padding: 26px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: 0 22px 44px rgba(0, 0, 0, 0.4);
+  transition: border-color 300ms ease;
 }
 
-.contact-link:hover {
-  transform: translateY(-6px);
-  border-color: rgba(96, 165, 250, 0.4);
-  box-shadow: 0 12px 32px rgba(167, 139, 250, 0.3);
+.contact-card:hover {
+  border-color: rgba(200, 255, 61, 0.4);
 }
 
-.contact-link-icon {
-  font-size: 1.5rem;
-  line-height: 1;
-}
-
-.contact-link-label {
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  color: var(--lilac-bright);
-}
-
-.contact-link-value {
-  font-size: 0.95rem;
+.contact-card-label {
+  font-family: var(--sans);
+  font-size: 10px;
   font-weight: 600;
-  color: var(--text);
+  letter-spacing: 0.16em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.contact-card-value {
+  font-family: var(--serif);
+  font-size: clamp(18px, 1.8vw, 26px);
+  letter-spacing: -0.01em;
   word-break: break-word;
 }
 
-/* Real footer */
-.site-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem 0;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.875rem;
+.contact-footer-line {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  color: var(--text-faint);
+  padding-top: 26px;
+  text-transform: uppercase;
 }
 
-@media (max-width: 768px) {
-  .contact {
-    padding: 2rem 0;
-  }
-
-  .contact h2 {
-    font-size: 1.75rem;
-  }
-
-  .contact-link {
-    min-width: 100%;
-  }
+.site-footer {
+  border-top: 1px solid var(--border-soft);
+  padding: 2rem 0;
+  text-align: center;
+  color: var(--text-faint);
+  font-size: 0.875rem;
 }

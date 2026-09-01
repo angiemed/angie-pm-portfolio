@@ -1,28 +1,21 @@
 .lessons {
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: clamp(30px, 5vh, 56px) 0;
 }
 
-.lessons-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.lessons-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.3px;
+.lessons-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
 }
 
 .lessons-subtitle {
-  font-size: 1rem;
-  color: var(--text-muted);
-  margin: 0;
+  font-size: 14px;
+  color: var(--text-faint);
+  margin: 10px 0 clamp(22px, 3.4vh, 38px);
+  max-width: 560px;
 }
 
 .lessons-grid {
@@ -35,24 +28,24 @@
   display: flex;
   gap: 0.9rem;
   align-items: flex-start;
-  background: var(--bg-hover);
+  background: var(--bg-card);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--lilac-dark);
+  border-left: 3px solid var(--lilac);
   border-radius: var(--radius-md);
   padding: 1.1rem 1.25rem;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
 }
 
 .lesson-card:hover {
   transform: translateY(-3px);
-  border-color: var(--lilac-dark);
+  border-color: var(--lime);
 }
 
 .lesson-index {
-  font-family: var(--mono);
+  font-family: var(--sans);
   font-size: 0.75rem;
-  font-weight: 800;
-  color: var(--lilac-dark);
+  font-weight: 700;
+  color: var(--lilac);
   flex-shrink: 0;
 }
 
@@ -64,26 +57,16 @@
 .lesson-project {
   display: inline-block;
   font-size: 0.68rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  color: var(--lilac-bright);
+  color: var(--lilac-soft);
   margin-bottom: 0.4rem;
 }
 
 .lesson-card p {
   font-size: 0.88rem;
-  color: var(--text-secondary);
+  color: var(--text-tertiary);
   line-height: 1.6;
   margin: 0;
-}
-
-@media (max-width: 768px) {
-  .lessons {
-    padding: 2rem 0;
-  }
-
-  .lessons-header h2 {
-    font-size: 1.75rem;
-  }
 }

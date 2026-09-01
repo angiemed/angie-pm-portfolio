@@ -41,54 +41,48 @@ export default function PMToolkit() {
 
   return (
     <section id="toolkit" className="toolkit">
-      <div className="container">
-        <div className="toolkit-header">
-          <h2>{t('toolkit.title')}</h2>
-          <p className="toolkit-subtitle">{t('toolkit.subtitle')}</p>
+      <div className="toolkit-label">{t('toolkit.title')}</div>
+      <p className="toolkit-subtitle">{t('toolkit.subtitle')}</p>
+
+      <div className="toolkit-block">
+        <h3>{t('toolkit.skillsLabel')}</h3>
+        <div className="toolkit-chips">
+          {skills.map((skill) => (
+            <span key={skill} className="toolkit-chip">
+              {skill.replace(/-/g, ' ')}
+            </span>
+          ))}
         </div>
+      </div>
 
-        <div className="toolkit-grid">
-          <div className="toolkit-block">
-            <h3>{t('toolkit.skillsLabel')}</h3>
-            <div className="toolkit-chips">
-              {skills.map((skill) => (
-                <span key={skill} className="toolkit-chip">
-                  {skill.replace(/-/g, ' ')}
-                </span>
-              ))}
-            </div>
-          </div>
+      <div className="toolkit-block">
+        <h3>{t('toolkit.technicalLabel')}</h3>
+        <div className="toolkit-chips">
+          {technicalItems.map((item, i) => (
+            <span key={i} className="toolkit-chip toolkit-chip-technical">
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
 
-          <div className="toolkit-block">
-            <h3>{t('toolkit.technicalLabel')}</h3>
-            <div className="toolkit-chips">
-              {technicalItems.map((item, i) => (
-                <span key={i} className="toolkit-chip toolkit-chip-technical">
-                  {item}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          <div className="toolkit-block">
-            <h3>{t('toolkit.toolsLabel')}</h3>
-            <div className="toolkit-chips">
-              {TOOLS.map((tool) => (
-                <span key={tool.name} className="toolkit-chip toolkit-chip-tool">
-                  <span className="toolkit-chip-icon" style={{ background: `#${tool.color}` }}>
-                    {tool.path ? (
-                      <svg viewBox="0 0 24 24" aria-hidden="true">
-                        <path d={tool.path} fill="#fff" />
-                      </svg>
-                    ) : (
-                      tool.initials
-                    )}
-                  </span>
-                  {tool.name}
-                </span>
-              ))}
-            </div>
-          </div>
+      <div className="toolkit-block">
+        <h3>{t('toolkit.toolsLabel')}</h3>
+        <div className="toolkit-chips">
+          {TOOLS.map((tool) => (
+            <span key={tool.name} className="toolkit-chip toolkit-chip-tool">
+              <span className="toolkit-chip-icon" style={{ background: `#${tool.color}` }}>
+                {tool.path ? (
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d={tool.path} fill="#fff" />
+                  </svg>
+                ) : (
+                  tool.initials
+                )}
+              </span>
+              {tool.name}
+            </span>
+          ))}
         </div>
       </div>
     </section>
