@@ -208,6 +208,18 @@
   color: var(--lime);
   white-space: nowrap;
   text-transform: uppercase;
+  cursor: pointer;
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.hero-availability:hover {
+  background: var(--lime);
+  color: var(--bg);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+.hero-availability:hover .hero-availability-dot {
+  background: var(--bg);
 }
 
 .hero-availability-dot {

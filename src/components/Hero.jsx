@@ -1,4 +1,5 @@
 import { useLanguage } from '../contexts/LanguageContext'
+import { useView } from '../contexts/ViewContext'
 import { LOCATION, CV_URL, CV_FILENAME, NICKNAME } from '../constants'
 import Tilt from './Tilt'
 import './Hero.css'
@@ -12,6 +13,7 @@ function scrollToWorkIndex() {
 
 export default function Hero() {
   const { t } = useLanguage()
+  const { go } = useView()
   const bannerLines = t('hero.bannerLines')
   const lines = Array.isArray(bannerLines) ? bannerLines : []
 
@@ -68,10 +70,15 @@ export default function Hero() {
           <div className="hero-portrait-ring hero-portrait-ring-static" />
           <img src="/profile.jpg" alt={t('hero.name')} className="hero-portrait-img" />
           <div className="hero-nickname">"{NICKNAME}"</div>
-          <div className="hero-availability">
+          <button
+            type="button"
+            data-magnet=""
+            className="hero-availability"
+            onClick={() => go('contact', t('nav.contact'))}
+          >
             <span className="hero-availability-dot" />
             {t('contact.availability')}
-          </div>
+          </button>
         </Tilt>
       </div>
     </section>

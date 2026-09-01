@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { useLanguage } from '../contexts/LanguageContext'
 import projectsEn from '../data/projects.json'
 import projectsEs from '../data/projects.es.json'
-import { FULL_NAME } from '../constants'
+import { FULL_NAME, NICKNAME } from '../constants'
 import Tilt from './Tilt'
 import './About.css'
 
@@ -35,6 +35,7 @@ export default function About() {
           <Tilt as="div" depth={0.8} className="about-photo">
             <div className="about-photo-ring" />
             <img src="/profile.jpg" alt={FULL_NAME} className="about-photo-img" />
+            <div className="about-nickname">"{NICKNAME}"</div>
           </Tilt>
 
           <div className="about-name">{FULL_NAME}</div>
