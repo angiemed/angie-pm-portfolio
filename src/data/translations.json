@@ -11,8 +11,10 @@
       "name": "Maria Angelica Avila Peña",
       "title": "Product Manager & Project Manager",
       "subtitle": "Career Path & Portfolio",
-      "description": "8 products delivered and in flight across B2C, B2B, SaaS, and regulated industries. Builder, strategist, and hands-on PM.",
-      "cta": "View My Work"
+      "description": "15+ products delivered across B2C, B2B, SaaS, and regulated industries. Builder, strategist, and hands-on PM.",
+      "cta": "View My Work",
+      "bannerLines": ["From uncertainty", "to a product", "ready to ship"],
+      "cvDownload": "Download CV"
     },
     "portfolio": {
       "title": "Product Work",
@@ -22,6 +24,18 @@
     },
     "clients": {
       "label": "Companies I've built products with"
+    },
+    "stats": {
+      "items": [
+        { "value": 15, "label": "Delivered projects" },
+        { "value": 10, "label": "Clients, US + Colombia" },
+        { "value": 5, "label": "Years of experience" }
+      ]
+    },
+    "panel": {
+      "caseStudy": "Case study",
+      "close": "Close",
+      "next": "Next case"
     },
     "sections": {
       "problem": "Problem",
@@ -54,7 +68,7 @@
     },
     "filter": {
       "all": "All",
-      "empty": "No case study here yet — more projects in this space are coming soon."
+      "empty": "No case study here yet: more projects in this space are coming soon."
     },
     "about": {
       "title": "About",
@@ -104,7 +118,7 @@
       "title": "My Contribution",
       "subtitle": "Where I create the most value across a product's lifecycle",
       "items": [
-        { "icon": "🔍", "title": "Discovery & Field Research", "text": "Starting with listening — understanding people's experiences, context, and pain points before jumping to solutions." },
+        { "icon": "🔍", "title": "Discovery & Field Research", "text": "Starting with listening: understanding people's experiences, context, and pain points before jumping to solutions." },
         { "icon": "🎯", "title": "Scope & MVP Strategy", "text": "Helping define what matters now, what comes next, and what the team needs to stay focused on." },
         { "icon": "🤝", "title": "Stakeholder Alignment", "text": "Bringing different perspectives into the same conversation and helping teams move toward shared decisions." },
         { "icon": "📊", "title": "Data-Informed Decisions", "text": "Using real usage metrics and evidence to challenge assumptions and make better product decisions." },
@@ -131,12 +145,12 @@
       "title": "My Product Philosophy",
       "subtitle": "What I've come to believe about building product, after five years of practice",
       "items": [
-        { "text": "The feature is rarely the real problem — the workflow around it usually is." },
+        { "text": "The feature is rarely the real problem; the workflow around it usually is." },
         { "text": "Discovery means understanding the reality behind a request, not just capturing requirements." },
-        { "text": "Complexity comes from how people, workflows, and constraints interact — not from the number of features." },
+        { "text": "Complexity comes from how people, workflows, and constraints interact, not from the number of features." },
         { "text": "Quality is a team responsibility, not something QA owns alone." },
         { "text": "Good product design starts with understanding how work is actually performed." },
-        { "text": "AI product management isn't about the model — it's about connecting technology to a problem worth solving." }
+        { "text": "AI product management isn't about the model. It's about connecting technology to a problem worth solving." }
       ]
     },
     "lessons": {
@@ -176,8 +190,10 @@
       "name": "Maria Angelica Avila Peña",
       "title": "Product Manager & Project Manager",
       "subtitle": "Trayectoria Profesional y Portafolio",
-      "description": "8 productos entregados y en desarrollo en B2C, B2B, SaaS e industrias reguladas. Builder, estratega, y PM hands-on.",
-      "cta": "Ver mi trabajo"
+      "description": "15+ productos entregados en B2C, B2B, SaaS e industrias reguladas. Builder, estratega, y PM hands-on.",
+      "cta": "Ver mi trabajo",
+      "bannerLines": ["De la incertidumbre", "a un producto", "listo para lanzar"],
+      "cvDownload": "Descargar CV"
     },
     "portfolio": {
       "title": "Trabajo en Productos",
@@ -187,6 +203,18 @@
     },
     "clients": {
       "label": "Empresas con las que he construido producto"
+    },
+    "stats": {
+      "items": [
+        { "value": 15, "label": "Proyectos entregados" },
+        { "value": 10, "label": "Clientes, EE.UU. + Colombia" },
+        { "value": 5, "label": "Años de experiencia" }
+      ]
+    },
+    "panel": {
+      "caseStudy": "Case study",
+      "close": "Cerrar",
+      "next": "Siguiente caso"
     },
     "sections": {
       "problem": "Problema",
@@ -219,7 +247,7 @@
     },
     "filter": {
       "all": "Todos",
-      "empty": "Todavía no hay un case study aquí — pronto voy a sumar más proyectos en esta área."
+      "empty": "Todavía no hay un case study aquí: pronto voy a sumar más proyectos en esta área."
     },
     "about": {
       "title": "Sobre mí",
@@ -295,12 +323,12 @@
       "title": "Mi Filosofía de Producto",
       "subtitle": "Lo que he llegado a creer sobre construir producto, después de cinco años de práctica",
       "items": [
-        { "text": "La funcionalidad rara vez es el problema real — el flujo de trabajo que la rodea, sí lo es con frecuencia." },
+        { "text": "La funcionalidad rara vez es el problema real; el flujo de trabajo que la rodea, sí lo es con frecuencia." },
         { "text": "El discovery significa entender la realidad detrás de una solicitud, no solo levantar requerimientos." },
-        { "text": "La complejidad viene de cómo interactúan las personas, los flujos de trabajo y las restricciones — no de la cantidad de funcionalidades." },
+        { "text": "La complejidad viene de cómo interactúan las personas, los flujos de trabajo y las restricciones, no de la cantidad de funcionalidades." },
         { "text": "La calidad es responsabilidad de todo el equipo, no algo que le pertenece solo a QA." },
         { "text": "Un buen diseño de producto empieza por entender cómo se realiza el trabajo en la práctica." },
-        { "text": "La gestión de producto de IA no se trata del modelo — se trata de conectar la tecnología con un problema que valga la pena resolver." }
+        { "text": "La gestión de producto de IA no se trata del modelo. Se trata de conectar la tecnología con un problema que valga la pena resolver." }
       ]
     },
     "lessons": {

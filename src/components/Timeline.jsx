@@ -29,33 +29,23 @@ export default function Timeline() {
   }, [projects, activeCategory])
 
   return (
-    <section id="proyectos" className="timeline">
-      <div className="container">
-        <div className="timeline-header">
-          <h2>{t('portfolio.title')}</h2>
-          <p className="timeline-subtitle">{t('portfolio.subtitle')}</p>
-        </div>
-
-        <CategoryFilter
-          active={activeCategory}
-          onChange={setActiveCategory}
-          allLabel={t('filter.all')}
-        />
-
-        <div className="timeline-container">
-          {filteredProjects.length > 0 ? (
-            <div className="projects-list">
-              {filteredProjects.map((project) => (
-                <div key={project.id} className="timeline-item">
-                  <ProjectCard project={project} />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <p className="timeline-empty">{t('filter.empty')}</p>
-          )}
-        </div>
+    <section id="work-index" className="work-index">
+      <div className="work-index-header">
+        <h2>{t('portfolio.title')}</h2>
+        <p className="work-index-subtitle">{t('portfolio.subtitle')}</p>
       </div>
+
+      <CategoryFilter active={activeCategory} onChange={setActiveCategory} allLabel={t('filter.all')} />
+
+      {filteredProjects.length > 0 ? (
+        <div className="work-index-grid">
+          {filteredProjects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
+          ))}
+        </div>
+      ) : (
+        <p className="work-index-empty">{t('filter.empty')}</p>
+      )}
     </section>
   )
 }

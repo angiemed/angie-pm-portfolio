@@ -1,64 +1,60 @@
 .category-filter {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.6rem;
-  margin: 0 0 2.5rem;
+  gap: 8px;
+  margin-bottom: clamp(22px, 3.4vh, 38px);
 }
 
 .filter-chip {
-  --chip-color: var(--lilac-dark);
+  --chip-color: var(--lime);
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.55rem 1.1rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: var(--text-secondary);
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  gap: 8px;
+  padding: 8px 15px;
+  border-radius: var(--radius-sm);
   cursor: pointer;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   transition: all var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: transparent;
+  color: var(--text-muted);
   white-space: nowrap;
 }
 
 .filter-chip-dot {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background: var(--chip-color);
   flex-shrink: 0;
 }
 
 .filter-chip:hover {
+  border-color: color-mix(in srgb, var(--chip-color) 55%, rgba(255, 255, 255, 0.14));
   color: var(--text);
-  border-color: color-mix(in srgb, var(--chip-color) 50%, var(--border));
-  transform: translateY(-2px);
 }
 
 .filter-chip.active {
-  color: var(--text);
-  background: color-mix(in srgb, var(--chip-color) 18%, var(--bg-card));
   border-color: var(--chip-color);
-  box-shadow: 0 4px 14px color-mix(in srgb, var(--chip-color) 35%, transparent);
+  background: var(--chip-color);
+  color: var(--bg);
 }
 
-@media (max-width: 768px) {
+.filter-chip.active .filter-chip-dot {
+  background: var(--bg);
+}
+
+@media (max-width: 640px) {
   .category-filter {
-    justify-content: flex-start;
-    overflow-x: auto;
     flex-wrap: nowrap;
-    padding-bottom: 0.25rem;
-    margin-bottom: 2rem;
-    /* Fade the trailing edge so a scrollable row reads as "more this way",
-       not as a chip cut off mid-word. */
+    overflow-x: auto;
+    padding-bottom: 4px;
     mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
     -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
-    padding-right: 1.5rem;
-  }
-
-  .filter-chip {
-    padding: 0.5rem 0.9rem;
+    padding-right: 24px;
   }
 }

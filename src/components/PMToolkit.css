@@ -1,92 +1,74 @@
 .toolkit {
-  padding: 4rem 0;
-  border-bottom: 1px solid var(--border);
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+  padding: clamp(30px, 5vh, 56px) 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
-.toolkit-header {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.toolkit-header h2 {
-  font-size: 2.5rem;
-  font-weight: 800;
-  background: var(--gradient-brand);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  margin-bottom: 0.5rem;
-  letter-spacing: -0.3px;
+.toolkit-label {
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--text-muted);
+  text-transform: uppercase;
 }
 
 .toolkit-subtitle {
-  font-size: 1rem;
-  color: var(--text-muted);
-  margin: 0;
-}
-
-.toolkit-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-}
-
-.toolkit-block {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem;
+  font-size: 14px;
+  color: var(--text-faint);
+  margin-top: -20px;
 }
 
 .toolkit-block h3 {
-  font-size: 0.8rem;
-  font-weight: 800;
+  font-family: var(--sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--lilac-soft);
+  margin: 0 0 14px;
   text-transform: uppercase;
-  letter-spacing: 0.6px;
-  color: var(--lilac-bright);
-  margin: 0 0 1.1rem;
 }
 
 .toolkit-chips {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.55rem;
+  gap: 7px;
 }
 
 .toolkit-chip {
-  font-size: 0.78rem;
-  font-weight: 600;
+  padding: 7px 13px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 13px;
   color: var(--text-secondary);
-  background: var(--bg-hover);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  padding: 0.4rem 0.85rem;
   text-transform: capitalize;
-  transition: all var(--transition-fast);
+  transition: border-color var(--transition-fast), color var(--transition-fast);
 }
 
 .toolkit-chip:hover {
+  border-color: var(--lilac);
   color: var(--text);
-  border-color: rgba(167, 139, 250, 0.5);
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.18) 0%, rgba(96, 165, 250, 0.18) 100%);
 }
 
 .toolkit-chip-technical {
-  background: linear-gradient(135deg, rgba(96, 165, 250, 0.14) 0%, rgba(167, 139, 250, 0.14) 100%);
-  border-color: rgba(96, 165, 250, 0.35);
-  color: var(--text);
+  background: rgba(167, 139, 250, 0.12);
+  border-color: rgba(167, 139, 250, 0.3);
+  color: var(--lilac-soft);
   text-transform: none;
 }
 
 .toolkit-chip-tool {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, rgba(6, 182, 212, 0.14) 0%, rgba(96, 165, 250, 0.14) 100%);
-  border-color: rgba(6, 182, 212, 0.35);
-  color: var(--text);
+  gap: 8px;
+  padding-left: 7px;
   text-transform: none;
+}
+
+.toolkit-chip-tool:hover {
+  border-color: var(--lime);
+  color: var(--text);
 }
 
 .toolkit-chip-icon {
@@ -94,30 +76,16 @@
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  font-size: 0.55rem;
-  font-weight: 800;
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 700;
   color: #fff;
-  letter-spacing: -0.2px;
 }
 
 .toolkit-chip-icon svg {
   width: 11px;
   height: 11px;
-}
-
-@media (max-width: 768px) {
-  .toolkit {
-    padding: 2rem 0;
-  }
-
-  .toolkit-header h2 {
-    font-size: 1.75rem;
-  }
-
-  .toolkit-block {
-    padding: 1.5rem;
-  }
 }

@@ -1,43 +1,33 @@
-import { useLanguage } from './contexts/LanguageContext'
+import { useView } from './contexts/ViewContext'
+import CursorHalo from './components/CursorHalo'
 import Header from './components/Header'
-import Clients from './components/Clients'
-import Timeline from './components/Timeline'
+import CurtainOverlay from './components/CurtainOverlay'
+import WorkView from './components/WorkView'
 import About from './components/About'
-import MyContribution from './components/MyContribution'
-import PMToolkit from './components/PMToolkit'
-import ProductPhilosophy from './components/ProductPhilosophy'
-import ProductLessons from './components/ProductLessons'
+import ExpertiseView from './components/ExpertiseView'
 import Contact from './components/Contact'
+import CaseStudyPanel from './components/CaseStudyPanel'
 import './App.css'
 
-function App() {
-  const { t } = useLanguage()
+export default function App() {
+  const { view } = useView()
 
   return (
     <div className="app">
+      <CursorHalo />
       <Header />
+      <CurtainOverlay />
 
-      <section id="home" className="hero">
-        <div className="container">
-          <div className="hero-avatar">
-            <img src="/profile.jpg" alt={t('hero.name')} />
-          </div>
-          <h2>{t('hero.subtitle')}</h2>
-          <p className="description">{t('hero.description')}</p>
-          <a href="#proyectos" className="cta">{t('hero.cta')}</a>
+      <main className="view-shell">
+        <div className="view-enter" key={view}>
+          {view === 'work' && <WorkView />}
+          {view === 'about' && <About />}
+          {view === 'expertise' && <ExpertiseView />}
+          {view === 'contact' && <Contact />}
         </div>
-      </section>
+      </main>
 
-      <Clients />
-      <Timeline />
-      <About />
-      <MyContribution />
-      <PMToolkit />
-      <ProductPhilosophy />
-      <ProductLessons />
-      <Contact />
+      <CaseStudyPanel />
     </div>
   )
 }
-
-export default App
